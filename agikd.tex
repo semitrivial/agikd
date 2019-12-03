@@ -20,6 +20,42 @@ Fill this in.
 
 \section{Introduction}
 
+One of the things that distinguishes AGIs from weaker AIs is that a truly
+strong AGI ought to be capable of programming AGIs. After all, an AGI
+presumably cannot form spontaneously out of thin air; the first AGI will,
+apparently, need to be programmed by humans; but if AGIs are capable of
+reasoning and exercising creativity like humans, and if humans are capable
+of building AGIs, then AGIs must be capable of building AGIs.
+
+The notion of AGIs programming AGIs is difficult to reason about. In order
+to have something solid to put our fingers on, we have attempted to abstract
+the core essence of that notion. This led us to discover
+what we call the \emph{literal ordinal notation system} (introduced in Section
+\ref{notationsystemsection}), an ordinal notation system that gets directly at
+the heart of the notion of computer programs writing computer programs.
+
+Say that an AGI is \emph{truthful} if it the things it knows are all true,
+i.e., if it does not know any falsehoods.
+In \cite{alexander2019}, we used the literal ordinal notation system to give an
+argument
+that it is impossible for a truthful AGI $X$ to create a truthful AGI $Y$
+in such a way that $X$ knows $Y$ is truthful.
+The argument is based on the assumption that if $X$ creates $Y$, then $X$
+knows $Y$'s sourcecode.
+
+At first glance, the above impossibility result would
+seem to suggest the impossibility of the singularity--the impossibility of
+what \cite{hutter2012} refers to as \emph{knowledge explosion}, the idea of
+AGIs creating even better AGIs, which create even better AGIs, and so on.
+But there is a loophole. Suppose $X_1$ and $X_2$ are two AGIs
+who collaborate to create $Y$. Suppose $X_1$ contributes proprietary sourcecode for
+part of $Y$, but keeps it secret from $X_2$, and suppose $X_2$ contributes proprietary
+sorcecode for another part of $Y$, but keeps it secret from $X_1$. Then neither
+$X_1$ nor $X_2$ knows the full sourcecode of $Y$, and the argument for the
+above-mentioned impossibility result breaks down.
+
+
+
 \bibliographystyle{splncs04}
 \bibliography{agikd}
 
