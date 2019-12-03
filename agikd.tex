@@ -38,22 +38,44 @@ Say that an AGI is \emph{truthful} if it the things it knows are all true,
 i.e., if it does not know any falsehoods.
 In \cite{alexander2019}, we used the literal ordinal notation system to give an
 argument
-that it is impossible for a truthful AGI $X$ to create a truthful AGI $Y$
-in such a way that $X$ knows $Y$ is truthful.
-The argument is based on the assumption that if $X$ creates $Y$, then $X$
+that it is impossible for a truthful AGI $X$ to create a
+truthful AGI $Y$ in such a way that $X$ knows $Y$ is truthful
+and such that $Y$ is at least as intelligent as $X$.
+The argument is based on the key assumption that if $X$ creates $Y$, then $X$
 knows $Y$'s sourcecode.
 
 At first glance, the above impossibility result would
 seem to suggest the impossibility of the singularity--the impossibility of
 what \cite{hutter2012} refers to as \emph{knowledge explosion}, the idea of
 AGIs creating even better AGIs, which create even better AGIs, and so on.
-But there is a loophole. Suppose $X_1$ and $X_2$ are two AGIs
-who collaborate to create $Y$. Suppose $X_1$ contributes proprietary sourcecode for
-part of $Y$, but keeps it secret from $X_2$, and suppose $X_2$ contributes proprietary
-sorcecode for another part of $Y$, but keeps it secret from $X_1$. Then neither
-$X_1$ nor $X_2$ knows the full sourcecode of $Y$, and the argument for the
+But there is a loophole. Suppose $X$ and $X'$ are two AGIs
+who collaborate to create $Y$. Suppose $X$ contributes proprietary sourcecode for
+part of $Y$, but keeps it secret from $X'$, and suppose $X'$ contributes proprietary
+sorcecode for another part of $Y$, but keeps it secret from $X$. Then neither
+$X$ nor $X'$ knows the full sourcecode of $Y$, and the argument for the
 above-mentioned impossibility result breaks down.
 
+The above-mentioned impossibility result would imply that if truthful
+AGI $X$ creates (without any outside
+help) truthful AGI $Y$, and knows the truthfulness and the sourcecode of $Y$,
+then $Y$ is less intelligent than $X$. In particular, suppose $X_1,X_2,\ldots$
+are truthful AGIs such that each $X_i$ creates, and knows the truthfulness and
+the sourcecode of, $X_{i+1}$. Then by applying the impossibility result repeatedly,
+it would follow that $X_1$ must be more intelligent than $X_2$, which must be more
+intelligent than $X_3$, and so on forever. If intelligence is well-founded (i.e.,
+if it is impossible for there to be an infinite sequence of AGIs, each one more
+intelligent than the next), then this would imply that it is impossible for such
+a list $X_1,X_2,\ldots$ to go on forever: it would have to stop after finitely
+many elements. But the above loophole offers a way that the list could go on
+forever, namely: if, for certain values of $i$, $X_i$ did not create $X_{i+1}$
+without outside help, but relied on a collaborator $X'_i$ (so that $X_i$ would
+not fully know the sourcecode of $X_{i+1}$).
+
+The Knight-Darwin law, named after Charles Darwin and Andrew Knight, is the
+principal (rephrased in modern language) that there cannot be an infinite
+sequence $X_1,X_2,\ldots$ of biological organisms such that each $X_i$ asexually
+parents $X_{i+1}$. The reader will immediately notice a profound parallel between
+this principal and the discussion in the previous paragraph.
 
 
 \bibliographystyle{splncs04}
