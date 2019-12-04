@@ -146,27 +146,128 @@ We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
     \end{enumerate}
 \end{definition}
 
-\begin{example} (Some simple examples)
+\begin{example}
+\label{simpleexamples}
+(Some simple examples)
     \begin{itemize}
     \item
     Let $P_0$ be ``End'', a program which immediately stops without printing any outputs.
     Vacuously, every output $x$ that gets printed when $P_0$ is executed is in $\mathcal P$
     (because there are no such outputs). So by condition 2 of
-    Definition \ref{literalnotationdef}, $P_0\in\mathcal P$.
+    Definition \ref{literalnotationdef}, $P_0$ is a Literal Ordinal Notation.
     \item
     Let $P_1$ be ``Print(``End'')'', a program which prints the output ``End'' and then
     stops. We already saw $\mbox{``End''}\in\mathcal P$, so by condition 2 of
-    Definition \ref{literalnotationdef}, $P_1\in\mathcal P$.
+    Definition \ref{literalnotationdef}, $P_1$ is a Literal Ordinal Notation.
     \item
     Let $P_2$ be ``Print(``Print(``End'')'')'', which prints ``Print(``End'')'' and then
     stops. We already saw $\mbox{``Print(``End'')''}\in\mathcal P$, so by condition 2
-    of Definition \ref{literalnotationdef}, $P_2\in\mathcal P$.
+    of Definition \ref{literalnotationdef}, $P_2$ is a Literal Ordinal Notation.
     \end{itemize}
 \end{example}
 
+\begin{example}
+\label{omegaexample}
+(A more interesting example)
+    Let $P_\omega$ be the program:
+    \[
+        \mbox{Let X = `End'; While(True) \{ Print(X); X = ``Print(`'' + X + ``')''; \}}
+    \]
+    When executed, $P_\omega$ prints ``End'', ``Print(``End'')'',
+    ``Print(``Print(``End'')'')'', and so on forever. By similar reasoning as
+    in Example \ref{simpleexamples}, all of these are Literal Ordinal Notations.
+    Therefore, $P_\omega$ is a Literal Ordinal Notation.
+\end{example}
+
+Because of the recursive way the Literal Ordinal Notations are defined, there is a
+natural way to assign computable ordinal numbers to them. This is why we call them
+Literal Ordinal Notations--we think of each Literal Ordinal Notation as notating
+(that is, as being a name for) the computable ordinal number assigned to it.
+How do we assign a computable ordinal to a Literal Ordinal Notation $x$? Well, because
+of the recursive nature of the definition, we can assume (by induction) that we've
+already assigned computable ordinals to all the outputs which are printed when $x$
+is executed (this makes sense because all such outputs are Literal Ordinal Notations,
+by definition). So the answer is clear: assign $x$ the first computable ordinal bigger
+than all the computable ordinals assigned to the outputs of $x$.
+
+\begin{definition}
+    For any Literal Ordinal Notation $x$, we define a computable ordinal $|x|$
+    inductively as follows: $|x|$ is the smallest computable ordinal $\alpha$
+    such that $\alpha>|y|$ for every output $y$ that gets printed when $x$ is
+    executed.
+\end{definition}
+
+\begin{example}
+    \begin{enumerate}
+        \item
+        Since $P_0$ (from Example \ref{simpleexamples}) has no outputs,
+        it follows that $|P_0|=0$, the smallest computable ordinal.
+        \item
+        Likewise, $|P_1|=1$ and $|P_2|=2$.
+        \item
+        Likewise, $P_\omega$ (from Example \ref{omegaexample}) has outputs
+        notating $0, 1, 2, \ldots$--all the finite natural numbers--and no
+        other outputs. It follows that $|P_\omega|=\omega$, the smallest
+        infinite ordinal number.
+        \item
+        Let $P_{\omega+1}$ be the program ``Print($P_\omega$)'',
+        where $P_\omega$ is as in Example \ref{omegaexample}.
+        It follows that $|P_{\omega+1}|=\omega+1$, the next ordinal after
+        $\omega$.
+    \end{enumerate}
+\end{example}
 
 \section{An Informal Version of the Impossibility Argument}
 \label{informalargumentsection}
+
+Whatever an AGI is, presumably an AGI knows certain mathematical facts
+(or could eventually deduce them, if placed in an isolated room for all eternity).
+The following definition offers a way to quantify an AGI's intelligence based
+solely on the mathematical facts that the AGI knows. In \cite{alexander2019measuring}
+we champion this as an appropriate intelligence measure by arguing that it
+captures key components of intelligence such as pattern recognition, creativity, and
+the ability to abstract and to generalize.
+% In the present paper, we'll add the
+% following observations to further justify the definition. In some sense, any
+% quantifiable measurement
+
+\begin{definition}
+\label{maindefinition}
+    The \emph{Literal Ordinal Intelligence} of an AGI $X$ is the smallest computable
+    ordinal $\alpha$ such that $\alpha>|p|$ for every Literal Ordinal Notation
+    $p$ such that $X$ knows (or would eventually figure out) that $p$ is a
+    Literal Ordinal Notation.
+\end{definition}
+
+Armed with Definition \ref{maindefinition}, we will give an informal version of the
+impossibility result from the Introduction.
+
+\begin{theorem}
+    Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$.
+    Assume $X$ knows $Y$'s sourcecode, and that $X$ knows that $Y$ is truthful.
+    Then $X$'s Literal Ordinal Intelligence is strictly greater than $Y$'s
+    Literal Ordinal Intelligence.
+\end{theorem}
+
+\begin{proof}
+    Suppose $Y$ were isolated for all eternity with just one instruction:
+    to spend eternity enumerating the biggest Literal Ordinal Notations $Y$ could
+    think of. This would result in some list $L$ of Literal Ordinal Notations
+    enumerated by $Y$. Since $Y$ is an AGI, $L$ must be computable, because $L$ can
+    be enumerated by a robot (namely by $Y$). Thus, there is some computer program
+    $P$ which outputs exactly the list $L$. Since $X$ knows $Y$'s sourcecode,
+    and presumably $X$ is capable of elementary reasoning about sourcecodes and
+    how to manipulate sourcecodes, it follows that $X$ can infer $P$--that is to
+    say, $X$ knows (or would eventually figure out) the statement, ``$P$ outputs
+    $L$, the list of things $Y$ would enumerate if $Y$ went off to enumerate
+    Literal Ordinal Notations for all eternity''. Since $X$ knows $Y$ is truthful,
+    $X$ can deduce that $L$ contains nothing except Literal Ordinal Notations,
+    and thus $X$ can deduce that all the outputs of $P$ are Literal Ordinal Notations,
+    and so $X$ knows (or would eventually figure out) that $P$ is a Literal Ordinal Notation.
+    Clearly $P$ notates an ordinal bigger than the ordinals notated by anything in $L$,
+    so since $X$ knows $P$ is a Literal Ordinal Notation, it follows $X$ has a larger
+    Literal Ordinal Intelligence than $Y$.
+\end{proof}
 
 \section{The Knight-Darwin Law}
 \label{kdlawsection}
