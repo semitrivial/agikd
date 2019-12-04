@@ -246,6 +246,7 @@ Armed with Definition \ref{maindefinition}, we will give an informal version of 
 impossibility result from the Introduction.
 
 \begin{theorem}
+\label{maintheorem}
     Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$.
     Assume $X$ knows $Y$'s sourcecode, and that $X$ knows that $Y$ is truthful.
     Then $X$'s Literal Ordinal Intelligence is strictly greater than $Y$'s
@@ -291,18 +292,45 @@ language as follows.
 
 \begin{principle}
 (The Knight-Darwin Law)
-Let $G$ be the directed graph whose nodes are all the
-living organisms (past, present, and future), with an
-edge directed from organism $u$ to organism $v$ if and only if
-$u$ is a biological parent of $v$. Then $G$ does not contain an
-infinite directed path of nodes each of which has $<2$ parents.
+It is impossible for there to be an infinite sequence
+$x_1,x_2,\ldots$ of living organisms such that each $x_i$
+is the lone biological parent of $x_{i+1}$. In other words,
+if there are ever organisms $x_1,x_2,\ldots$ such that each
+$x_i$ is a biological parent of $x_{i+1}$, then there must
+be some $i>1$ such that $x_i$ has multiple distinct biological
+parents.
 \end{principle}
-
-
 
 
 \section{The Knight-Darwin Law for AGI}
 \label{knightdarwinagisection}
+
+One of the most important properties of the ordinal numbers is the
+fact that they are \emph{well-founded}: by which we mean, there is
+no infinite sequence $o_1,o_2,\ldots$ of ordinals such that each
+$o_i>o_{i+1}$. In Theorem \ref{maintheorem} we showed that if truthful
+AGI $X$ creates truthful AGI $Y$, and if $X$ knows the truthfulness
+and the sourcecode of $Y$, then $X$ has a higher Literal Ordinal Intelligence
+than $Y$. Combining this with the well-foundedness of the ordinals yields
+a theorem which is extremely similar to the Knight-Darwin Law.
+
+\begin{theorem}
+(The Knight-Darwin Law for AGIs)
+It is impossible for there to be an infinite sequence
+$x_1,x_2,\ldots$ of truthful AGIs such that each $x_i$ is the lone creator of $x_{i+1}$.
+In other words, if there are
+ever truthful AGIs $x_1,x_2,\ldots$ such that each $x_i$ is a creator of $x_{i+1}$,
+then there must be some $i>1$ such that multiple distinct creators collaborated to
+create $x_i$.
+\end{theorem}
+
+\begin{proof}
+By contradiction. Assume $x_1,x_2,\ldots$ is an infinite sequence of truthful AGIs such
+that each $x_i$ is the lone creator of $x_{i+1}$. For each $i$, let $\alpha_i$
+be the Literal Ordinal Intelligence of $x_i$. By Theorem \ref{maintheorem},
+$\alpha_1>\alpha_2>\cdots$. This contradicts the well-foundedness of the ordinal
+numbers.
+\end{proof}
 
 
 \bibliographystyle{splncs04}
