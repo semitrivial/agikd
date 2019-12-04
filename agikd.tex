@@ -100,6 +100,71 @@ the creation of AGI.
 \section{The Literal Ordinal Notation System}
 \label{notationsystemsection}
 
+We do not know what, exactly, an AGI is, but we want to study AGIs anyway.
+Based on the conviction that an AGI should be capable of programming AGIs,
+we would like to come up with a more concrete kind of structure, easier to reason
+about, which we can use as a proxy for AGIs.
+
+What sort of structure would capture the essence of an AGI's capability
+of programming AGI's? As an initial attempt, how about this: ``computer
+program that outputs computer programs''? That seems like the right direction
+to go, but as written, there is no constraint on the computer programs which
+are outputted, so this initial attempt seems to capture the essence of an
+AGI's capability of writing \emph{computer programs}, not the essence of an
+AGI's capability of writing \emph{AGIs}.
+
+As a second attempt, how
+about this: ``computer program that outputs computer programs that output
+computer programs''? This brings us a little closer, but this second attempt
+seems to capture the essence of an AGI's capability of writing \emph{first-attempt programs},
+rather than the essence of an AGI's capability of writing \emph{AGIs}.
+
+As a third attempt, how about this:
+``computer program that outputs computer programs that output computer programs
+that output computer programs''? This brings us closer still, but this third
+attempt seems to capture the essence of an AGI's capability of writing
+\emph{second-attempt programs}, rather than the essence of an AGI's capability of
+writing \emph{AGIs}.
+
+It seems like we need to short-circuit this process. We need to come up with a notion
+X which is equivalent to ``computer program that outputs members of X''.
+Fortunately, this is not difficult to do using a basic trick from mathematics.
+We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
+
+\begin{definition}
+\label{literalnotationdef}
+    (See the following examples)
+    We define the Literal Ordinal Notations to be the smallest set $\mathcal P$
+    satisfying the following properties:
+    \begin{enumerate}
+        \item
+            Every element of $\mathcal P$ is a computer program.
+        \item
+            For every computer program $p$,
+            if $\mathcal P$ contains every output that gets printed when $p$ is executed,
+            then $p\in\mathcal P$.
+    \end{enumerate}
+\end{definition}
+
+\begin{example} (Some simple examples)
+    \begin{itemize}
+    \item
+    Let $P_0$ be ``End'', a program which immediately stops without printing any outputs.
+    Vacuously, every output $x$ that gets printed when $P_0$ is executed is in $\mathcal P$
+    (because there are no such outputs). So by condition 2 of
+    Definition \ref{literalnotationdef}, $P_0\in\mathcal P$.
+    \item
+    Let $P_1$ be ``Print(``End'')'', a program which prints the output ``End'' and then
+    stops. We already saw $\mbox{``End''}\in\mathcal P$, so by condition 2 of
+    Definition \ref{literalnotationdef}, $P_1\in\mathcal P$.
+    \item
+    Let $P_2$ be ``Print(``Print(``End'')'')'', which prints ``Print(``End'')'' and then
+    stops. We already saw $\mbox{``Print(``End'')''}\in\mathcal P$, so by condition 2
+    of Definition \ref{literalnotationdef}, $P_2\in\mathcal P$.
+    \end{itemize}
+\end{example}
+
+
 \section{An Informal Version of the Impossibility Argument}
 \label{informalargumentsection}
 
