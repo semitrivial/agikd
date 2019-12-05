@@ -1,5 +1,14 @@
 \documentclass[runningheads]{llncs}
 
+\newtheorem{mytheorem}{Theorem}
+\newtheorem{mylemma}[mytheorem]{Lemma}
+\newtheorem{myquestion}[mytheorem]{Question}
+\newtheorem{myexample}[mytheorem]{Example}
+\newtheorem{myproposition}[mytheorem]{Proposition}
+\newtheorem{mycorollary}[mytheorem]{Corollary}
+\newtheorem{mydefinition}[mytheorem]{Definition}
+\newtheorem{myprinciple}[mytheorem]{Principle}
+
 \begin{document}
 
 \title{AGI and the Knight-Darwin Law}
@@ -133,7 +142,7 @@ X which is equivalent to ``computer program that outputs members of X''.
 Fortunately, this is not difficult to do using a basic trick from mathematics.
 We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
 
-\begin{definition}
+\begin{mydefinition}
 \label{literalnotationdef}
     (See the following examples)
     We define the Literal Ordinal Notations to be the smallest set $\mathcal P$
@@ -146,9 +155,9 @@ We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
             if $\mathcal P$ contains every output that gets printed when $p$ is executed,
             then $p\in\mathcal P$.
     \end{enumerate}
-\end{definition}
+\end{mydefinition}
 
-\begin{example}
+\begin{myexample}
 \label{simpleexamples}
 (Some simple examples)
     \begin{itemize}
@@ -166,9 +175,9 @@ We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
     stops. We already saw $\mbox{``Print(``End'')''}\in\mathcal P$, so by condition 2
     of Definition \ref{literalnotationdef}, $P_2$ is a Literal Ordinal Notation.
     \end{itemize}
-\end{example}
+\end{myexample}
 
-\begin{example}
+\begin{myexample}
 \label{omegaexample}
 (A more interesting example)
     Let $P_\omega$ be the program:
@@ -179,7 +188,7 @@ We will fill in the blank X sign with the phrase ``Literal Ordinal Notation''.
     ``Print(``Print(``End'')'')'', and so on forever. By similar reasoning as
     in Example \ref{simpleexamples}, all of these are Literal Ordinal Notations.
     Therefore, $P_\omega$ is a Literal Ordinal Notation.
-\end{example}
+\end{myexample}
 
 Because of the recursive way the Literal Ordinal Notations are defined, there is a
 natural way to assign computable ordinal numbers to them. This is why we call them
@@ -192,14 +201,14 @@ is executed (this makes sense because all such outputs are Literal Ordinal Notat
 by definition). So the answer is clear: assign $x$ the first computable ordinal bigger
 than all the computable ordinals assigned to the outputs of $x$.
 
-\begin{definition}
+\begin{mydefinition}
     For any Literal Ordinal Notation $x$, we define a computable ordinal $|x|$
     inductively as follows: $|x|$ is the smallest computable ordinal $\alpha$
     such that $\alpha>|y|$ for every output $y$ that gets printed when $x$ is
     executed.
-\end{definition}
+\end{mydefinition}
 
-\begin{example}
+\begin{myexample}
     \begin{enumerate}
         \item
         Since $P_0$ (from Example \ref{simpleexamples}) has no outputs,
@@ -217,10 +226,10 @@ than all the computable ordinals assigned to the outputs of $x$.
         It follows that $|P_{\omega+1}|=\omega+1$, the next ordinal after
         $\omega$.
     \end{enumerate}
-\end{example}
+\end{myexample}
 
 The Literal Ordinal Notation System is similar to Kleene's $\mathcal O$,
-an ordinal notation system devised by Stephen Kleene \cite{kleene}.
+an ordinal notation system devised by Stephen Kleene \cite{kleene1938notation}.
 
 \section{An Informal Version of the Impossibility Argument}
 \label{informalargumentsection}
@@ -236,24 +245,24 @@ the ability to abstract and to generalize.
 % following observations to further justify the definition. In some sense, any
 % quantifiable measurement
 
-\begin{definition}
+\begin{mydefinition}
 \label{maindefinition}
     The \emph{Literal Ordinal Intelligence} of an AGI $X$ is the smallest computable
     ordinal $\alpha$ such that $\alpha>|p|$ for every Literal Ordinal Notation
     $p$ such that $X$ knows (or would eventually figure out) that $p$ is a
     Literal Ordinal Notation.
-\end{definition}
+\end{mydefinition}
 
 Armed with Definition \ref{maindefinition}, we will give an informal version of the
 impossibility result from the Introduction.
 
-\begin{theorem}
+\begin{mytheorem}
 \label{maintheorem}
     Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$.
     Assume $X$ knows $Y$'s sourcecode, and that $X$ knows that $Y$ is truthful.
     Then $X$'s Literal Ordinal Intelligence is strictly greater than $Y$'s
     Literal Ordinal Intelligence.
-\end{theorem}
+\end{mytheorem}
 
 \begin{proof}
     Suppose $Y$ were isolated for all eternity with just one instruction:
@@ -288,11 +297,11 @@ is occasionally---perhaps at long intervals of time---indispensable.''
 In his Origin of Species \cite{originofspecies}, Charles Darwin devotes many
 pages to the above-quoted principal, which would later become known as the
 Knight-Darwin Law \cite{darwin1898knight}. In \cite{alexander2013} and
-\cite{alexander2015}, based on a close reading of Darwin's text, we argue
+\cite{alexander2015alternative}, based on a close reading of Darwin's text, we argue
 that the Knight-Darwin Law is accurately translated into modern mathematical
 language as follows.
 
-\begin{principle}
+\begin{myprinciple}
 (The Knight-Darwin Law)
 It is impossible for there to be an infinite sequence
 $x_1,x_2,\ldots$ of living organisms such that each $x_i$
@@ -301,7 +310,7 @@ if there are ever organisms $x_1,x_2,\ldots$ such that each
 $x_i$ is a biological parent of $x_{i+1}$, then there must
 be some $i>1$ such that $x_i$ has multiple distinct biological
 parents.
-\end{principle}
+\end{myprinciple}
 
 
 \section{The Knight-Darwin Law for AGI}
@@ -316,7 +325,7 @@ and the sourcecode of $Y$, then $X$ has a higher Literal Ordinal Intelligence
 than $Y$. Combining this with the well-foundedness of the ordinals yields
 a theorem which is extremely similar to the Knight-Darwin Law.
 
-\begin{theorem}
+\begin{mytheorem}
 \label{maintheorem2}
 (The Knight-Darwin Law for AGIs)
 It is impossible for there to be an infinite sequence
@@ -325,7 +334,7 @@ In other words, if there are
 ever truthful AGIs $x_1,x_2,\ldots$ such that each $x_i$ is a creator of $x_{i+1}$,
 then there must be some $i>1$ such that multiple distinct creators collaborated to
 create $x_i$.
-\end{theorem}
+\end{mytheorem}
 
 \begin{proof}
 By contradiction. Assume $x_1,x_2,\ldots$ is an infinite sequence of truthful AGIs such
@@ -359,6 +368,8 @@ prioritizing specific approaches to AI that involve multiple agents. For example
 (cite Brendon's papers).
 
 \subsection{Motivation for AGI diversity}
+
+
 
 \subsection{AGI geneology}
 
