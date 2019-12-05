@@ -402,6 +402,34 @@ genes in AGI.
 \section{Objections}
 \label{objectionsection}
 
+In this section, we address some anticipated objections that the reader might have.
+
+\subsection{Prohibitively expensive simulation}
+
+The reader might object that Theorem \ref{maintheorem} breaks down if $Y$ is prohibitively
+expensive for $X$ to simulate or emulate. But actually, Theorem \ref{maintheorem} and its
+proof have nothing to do with simulation or emulation. A person can reason about sourcecode
+without needing to run that source-code (indeed, there's a whole industry devoted to
+exactly this---so-called \emph{static analysis}). In the same way, if $X$ knows the sourcecode
+of $Y$, then $X$ can reason about that sourcecode without actually executing a single line
+of it.
+
+\subsection{Recursive enumerability of mathematical theorems}
+
+The reader might object that the set of all mathematical theorems is recursively enumerable,
+i.e., there exists a Turing machine that lists all mathematical theorems---in which case we
+could build an AGI to build all such theorems, and that AGI would have unbeatable intelligence
+according to Definition \ref{maindefinition}, and this seems absurd.
+But when logicians say that the set of mathematical theorems is recursively enumerable,
+what they mean is that the set of mathematical theorems implied by some fixed, recursively
+enumerable base set of axioms, is recursively enumerable. For example, the set of all
+theorems of Peano arithmetic is recursively enumerable, or the set of all theorems of
+ZFC, etc. But G\"odel's first incompleteness theorem demonstrates that for any recursively
+enumerable set of axioms, there is always a true mathematical statement not proved by
+those axioms. Thus, there is no reason to believe there is some fixed recursively enumerable
+axiom-set such that all AGIs universally are limited to only knowing theorems provable
+from that axiom-set.
+
 \bibliographystyle{splncs04}
 \bibliography{agikd}
 
