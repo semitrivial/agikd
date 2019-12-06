@@ -22,96 +22,86 @@
 \maketitle
 
 \begin{abstract}
-This is a paper about AGIs (agents with Artificial General Intelligence), specifically
-about truthful AGIs (AGIs whose knowledge does not contain any falsehoods).
-More specifically, this paper concerns the structure of the AGI populations that
-can result when parent AGIs create child AGIs. We argue that such populations must
-satisfy a certain property, which we call ``The Knight-Darwin Law for AGIs'',
-named after a property of biological populations, ``The Knight-Darwin Law''.
-In biology, the Knight-Darwin law states that it is impossible for one organism
-to asexually produce another organism, which asexually produces another organism,
-which asexually produces another organism, and so on forever: in other words,
+This is a paper about AGIs (agents with Artificial General Intelligence),
+and more specifically, about the structure of the populations that
+result when parent AGIs create child AGIs. We argue that such populations must
+satisfy a certain property which is similar to a property of biological
+populations, the Knight-Darwin Law.
+The biological Knight-Darwin law states that it is impossible for one organism
+to asexually produce another organism, which asexually produces another,
+which asexually produces another, and so on forever:
 that any sequence of organisms (each one a child of the previous) must contain
-an organism with multiple parents, or must terminate. We argue that a similar
-structural property must hold for AGIs creating AGIs. We offer some speculation
-about implications which this result has for the future development of AGIs.
+a multi-parent organism, or must terminate. We argue that a similar
+structural property holds for AGIs creating AGIs under certain assumptions,
+and speculate about implications for human-made AGIs.
 
 
-\keywords{Intelligence measurement \and Knight-Darwin Law \and Ordinal Notations
+\keywords{Intelligence Measurement \and Knight-Darwin Law \and Ordinal Notations
 \and Intelligence Explosion}
 \end{abstract}
 
 \section{Introduction}
 
-One of the things that distinguishes AGIs from weaker AIs is that a truly
+One thing that distinguishes AGIs from weaker AIs is that a truly
 strong AGI ought to be capable of programming AGIs\footnote{Within this paper,
 our approach to AGI is what Goertzel \cite{goertzel2014artificial} describes
-as the Universalist Approach, in the sense
-that
+as the Universalist Approach:
 we consider ``...an idealized case of AGI, similar to
 assumptions like the frictionless plane in physics'', with the hope that by
 understanding this ``simplified special
 case, we can use the understanding we've gained to address more realistic
-cases.''}. After all, an AGI
-presumably cannot form spontaneously out of thin air; the first AGI will,
-apparently, need to be programmed by humans; but if AGIs are capable of
-reasoning and exercising creativity like humans, and if humans are capable
-of building AGIs, then AGIs must be capable of building AGIs.
+cases.''}. After all, the first AGIs will,
+apparently, need to be programmed by humans. If AGIs are at least as smart as
+humans, and if humans can
+build AGIs, then AGIs ought to be able to build AGIs.
 
-The notion of AGIs programming AGIs is difficult to reason about. In order
-to have something solid to put our fingers on, we have attempted to abstract
-the core essence of that notion. This led us to discover
-what we call the \emph{Literal Ordinal Notation System} (introduced in Section
+AGIs programming AGIs is difficult to reason about. To get our hands on something solid,
+we have attempted to find structures that abstractly capture the core essence of
+AGIs programming AGIs. This led us to discover
+what we call the \emph{Intuitive Ordinal Notation System} (introduced in Section
 \ref{notationsystemsection}), an ordinal notation system that gets directly at
-the heart of the notion of computer programs writing computer programs.
+the heart of AGIs creating AGIs.
 
-Say that an AGI is \emph{truthful} if the things it knows are all true,
+We call an AGI \emph{truthful} if the things it knows are all true,
 i.e., if it does not know any falsehoods.
-In \cite{alexander2019measuring}, we used the Literal Ordinal Notation System to give an
-argument
-that it is impossible for a truthful AGI $X$ to create a
-truthful AGI $Y$ in such a way that $X$ knows $Y$ is truthful
-and such that $Y$ is at least as intelligent as $X$.
-The argument is based on the key assumption that if $X$ creates $Y$, then $X$
-knows $Y$'s sourcecode.
+In \cite{alexander2019measuring}, we used the Intuitive Ordinal Notation System to argue
+that if a truthful AGI $X$ creates (without external help) a truthful AGI $Y$, in such a way
+that $X$ knows the truthfulness of $Y$, then $X$ must be more intelligent than $Y$
+in a certain formal sense. The argument is based on the key assumption that if $X$
+creates $Y$, without external help, then $X$ necessarily knows $Y$'s sourcecode.
 
-At first glance, the above impossibility result would
-seem to suggest the impossibility of the singularity--the impossibility of
-what \cite{hutter2012} refers to as \emph{knowledge explosion}, the idea of
-AGIs creating even better AGIs, which create even better AGIs, and so on.
-But there is a loophole. Suppose $X$ and $X'$ are two AGIs
-who collaborate to create $Y$. Suppose $X$ contributes proprietary sourcecode for
-part of $Y$, but keeps it secret from $X'$, and suppose $X'$ contributes proprietary
-sorcecode for another part of $Y$, but keeps it secret from $X$. Then neither
-$X$ nor $X'$ knows the full sourcecode of $Y$, and the argument for the
-above-mentioned impossibility result breaks down.
-
-The above-mentioned impossibility result would imply that if truthful
-AGI $X$ creates (without any outside
-help) truthful AGI $Y$, and knows the truthfulness and the sourcecode of $Y$,
-then $Y$ is less intelligent than $X$. In particular, suppose $X_1,X_2,\ldots$
+Iterating the above argument, suppose $X_1,X_2,\ldots$
 are truthful AGIs such that each $X_i$ creates, and knows the truthfulness and
-the sourcecode of, $X_{i+1}$. Then by applying the impossibility result repeatedly,
-it would follow that $X_1$ must be more intelligent than $X_2$, which must be more
-intelligent than $X_3$, and so on forever. If intelligence is well-founded (i.e.,
-if it is impossible for there to be an infinite sequence of AGIs, each one more
-intelligent than the next), then this would imply that it is impossible for such
+the sourcecode of, $X_{i+1}$. By the previous paragraph, $X_1$ would be more
+intelligent than $X_2$, which would be more
+intelligent than $X_3$, and so on. If intelligence is well-founded (i.e.,
+if it is impossible for a chain of AGIs to keep getting less and less intelligent
+without eventually hitting some minimum possible intelligence level),
+then this would imply that it is impossible for such
 a list $X_1,X_2,\ldots$ to go on forever: it would have to stop after finitely
-many elements. But the above loophole offers a way that the list could go on
-forever, namely: if, for certain values of $i$, $X_i$ did not create $X_{i+1}$
-without outside help, but relied on a collaborator $X'_i$ (so that $X_i$ would
-not fully know the sourcecode of $X_{i+1}$).
+many elements.
+
+At first glance, the above results might
+seem to suggest skepticism regarding the singularity---or regarding
+what Hutter \cite{hutter2012} calls \emph{knowledge explosion}, the idea of
+AGIs creating better AGIs, which create even better AGIs, and so on.
+But there is a loophole. Suppose $X$ and $X'$ are AGIs
+who collaborate to create $Y$. Suppose $X$ contributes sourcecode for
+part of $Y$, but keeps it secret from $X'$, and suppose $X'$ contributes
+sourcecode for another part of $Y$, but keeps it secret from $X$. Then neither
+$X$ nor $X'$ knows $Y$'s full sourcecode, and the above-mentioned argument
+breaks down.
+
 
 The Knight-Darwin law \cite{darwin1898knight}, named after Charles Darwin
 and Andrew Knight, is the
 principal (rephrased in modern language) that there cannot be an infinite
 sequence $X_1,X_2,\ldots$ of biological organisms such that each $X_i$ asexually
 parents $X_{i+1}$. In other words, if $X_1,X_2,\ldots$ is any infinite list of
-organisms such that each $X_i$ is a biological parent of $X_{i+1}$, then there
-would necessarily have to be certain values of $i$ such that
-$X_i$ parents $X_{i+1}$ sexually with together with a co-parent $X'_{i}$.
+organisms such that each $X_i$ is a biological parent of $X_{i+1}$, then some of the
+$X_i$ would need to be multi-parent organisms.
 The reader will immediately notice a striking parallel between
-this principal and the discussion in the previous paragraph.
+this principal and the discussion in the previous two paragraph.
 
 In Section \ref{notationsystemsection} we introduce the Literal Ordinal Notation
 System.
