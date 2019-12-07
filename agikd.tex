@@ -189,34 +189,33 @@ We will fill in the blank X with the phrase ``Intuitive Ordinal Notation''.
 (A more interesting example)
     Let $P_\omega$ be the program:
     \[
-        \mbox{Let X = `End'; While(True) \{ Print(X); X = ``Print(`'' + X + ``')''; \}}
+        \mbox{\normalfont Let X = `End';
+        While(True) \{ Print(X); X = ``Print(`'' + X + ``')''; \}}
     \]
     When executed, $P_\omega$ prints ``End'', ``Print(``End'')'',
-    ``Print(``Print(``End'')'')'', and so on forever. By similar reasoning as
-    in Example \ref{simpleexamples}, all of these are Literal Ordinal Notations.
-    Therefore, $P_\omega$ is a Literal Ordinal Notation.
+    ``Print(``Print(``End'')'')'', and so on forever. As
+    in Example \ref{simpleexamples}, all of these are Intuitive Ordinal Notations.
+    Therefore, $P_\omega$ is an Intuitive Ordinal Notation.
 \end{myexample}
 
-Because of the recursive way the Literal Ordinal Notations are defined, there is a
-natural way to assign computable ordinal numbers to them. This is why we call them
-Literal Ordinal Notations--we think of each Literal Ordinal Notation as notating
-(that is, as being a name for) the computable ordinal number assigned to it.
-How do we assign a computable ordinal to a Literal Ordinal Notation $x$? Well, because
-of the recursive nature of the definition, we can assume (by induction) that we've
-already assigned computable ordinals to all the outputs which are printed when $x$
-is executed (this makes sense because all such outputs are Literal Ordinal Notations,
+Because of the recursive way the Intuitive Ordinal Notations are defined, there is a
+natural way to assign computable ordinal numbers to them.
+How do we assign a computable ordinal to an Intuitive Ordinal Notation $x$?
+We can assume (by induction) that we've
+already assigned computable ordinals to all the outputs printed when $x$
+is executed (this makes sense because all such outputs are Intuitive Ordinal Notations,
 by definition). So the answer is clear: assign $x$ the first computable ordinal bigger
 than all the computable ordinals assigned to the outputs of $x$.
 
 \begin{mydefinition}
-    For any Literal Ordinal Notation $x$, we define a computable ordinal $|x|$
+    For any Intuitive Ordinal Notation $x$, we define a computable ordinal $|x|$
     inductively as follows: $|x|$ is the smallest computable ordinal $\alpha$
     such that $\alpha>|y|$ for every output $y$ that gets printed when $x$ is
     executed.
 \end{mydefinition}
 
 \begin{myexample}
-    \begin{enumerate}
+    \begin{itemize}
         \item
         Since $P_0$ (from Example \ref{simpleexamples}) has no outputs,
         it follows that $|P_0|=0$, the smallest computable ordinal.
@@ -232,63 +231,59 @@ than all the computable ordinals assigned to the outputs of $x$.
         where $P_\omega$ is as in Example \ref{omegaexample}.
         It follows that $|P_{\omega+1}|=\omega+1$, the next ordinal after
         $\omega$.
-    \end{enumerate}
+    \end{itemize}
 \end{myexample}
 
-The Literal Ordinal Notation System is similar to Kleene's $\mathcal O$,
-an ordinal notation system devised by Stephen Kleene \cite{kleene1938notation}.
+The Intuitive Ordinal Notation System is a more intuitive simplification of
+Kleene's $\mathcal O$ ordinal notation system \cite{kleene1938notation}.
 
-\section{An Informal Version of the Impossibility Argument}
+\section{Inductive Ordinal Intelligence}
 \label{informalargumentsection}
 
 Whatever an AGI is, presumably an AGI knows certain mathematical facts
-(or could eventually deduce them, if placed in an isolated room for all eternity).
-The following definition offers a way to quantify an AGI's intelligence based
+(or could eventually deduce them).
+The following is a notion of an AGI's intelligence based
 solely on the mathematical facts that the AGI knows. In \cite{alexander2019measuring}
-we champion this as an appropriate intelligence measure by arguing that it
-captures key components of intelligence such as pattern recognition, creativity, and
-the ability to abstract and to generalize.
-% In the present paper, we'll add the
-% following observations to further justify the definition. In some sense, any
-% quantifiable measurement
+we argue that this notion captures key components of intelligence such as
+pattern recognition, creativity, and the ability to abstract and to
+generalize.
 
 \begin{mydefinition}
 \label{maindefinition}
-    The \emph{Literal Ordinal Intelligence} of an AGI $X$ is the smallest computable
-    ordinal $\alpha$ such that $\alpha>|p|$ for every Literal Ordinal Notation
-    $p$ such that $X$ knows (or would eventually figure out) that $p$ is a
-    Literal Ordinal Notation.
+    The \emph{Intuitive Ordinal Intelligence} of an AGI $X$ is the smallest computable
+    ordinal $\alpha$ such that $\alpha>|p|$ for every Intuitive Ordinal Notation
+    $p$ such that $X$ knows (or could eventually deduce) that $p$ is an
+    Intuitive Ordinal Notation.
 \end{mydefinition}
 
-Armed with Definition \ref{maindefinition}, we will give an informal version of the
-impossibility result from the Introduction.
+The following theorem provides a relationship between Intuitive Ordinal Intelligence
+and AGI creation of AGI.
 
 \begin{mytheorem}
 \label{maintheorem}
-    Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$.
-    Assume $X$ knows $Y$'s sourcecode, and that $X$ knows that $Y$ is truthful.
-    Then $X$'s Literal Ordinal Intelligence is strictly greater than $Y$'s
-    Literal Ordinal Intelligence.
+    Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$,
+    in such a way that $X$ knows $Y$'s sourcecode and truthfulness. Then
+    $X$ has higher Intuitive Ordinal Intelligence than $Y$.
 \end{mytheorem}
 
 \begin{proof}
-    Suppose $Y$ were isolated for all eternity with just one instruction:
-    to spend eternity enumerating the biggest Literal Ordinal Notations $Y$ could
-    think of. This would result in some list $L$ of Literal Ordinal Notations
+    Suppose $Y$ were commanded to
+    spend eternity enumerating the biggest Intuitive Ordinal Notations $Y$ could
+    think of. This would result in some list $L$ of Intuitive Ordinal Notations
     enumerated by $Y$. Since $Y$ is an AGI, $L$ must be computable, because $L$ can
     be enumerated by a robot (namely by $Y$). Thus, there is some computer program
-    $P$ which outputs exactly the list $L$. Since $X$ knows $Y$'s sourcecode,
-    and presumably $X$ is capable of elementary reasoning about sourcecodes and
-    how to manipulate sourcecodes, it follows that $X$ can infer $P$--that is to
-    say, $X$ knows (or would eventually figure out) the statement, ``$P$ outputs
-    $L$, the list of things $Y$ would enumerate if $Y$ went off to enumerate
-    Literal Ordinal Notations for all eternity''. Since $X$ knows $Y$ is truthful,
-    $X$ can deduce that $L$ contains nothing except Literal Ordinal Notations,
-    and thus $X$ can deduce that all the outputs of $P$ are Literal Ordinal Notations,
-    and so $X$ knows (or would eventually figure out) that $P$ is a Literal Ordinal Notation.
-    Clearly $P$ notates an ordinal bigger than the ordinals notated by anything in $L$,
-    so since $X$ knows $P$ is a Literal Ordinal Notation, it follows $X$ has a larger
-    Literal Ordinal Intelligence than $Y$.
+    $P$ whose outputs are exactly $L$. Since $X$ knows $Y$'s sourcecode,
+    and presumably $X$ is capable of elementary reasoning about sourcecodes,
+    it follows that $X$ can infer $P$---that is,
+    $X$ knows (or could eventually deduce) the statement: ``$P$ outputs
+    $L$, the list of things $Y$ would print if $Y$ were commanded to enumerate
+    Intuitive Ordinal Notations for all eternity''. Since $X$ knows $Y$ is truthful,
+    $X$ can deduce that $L$ contains nothing except Intuitive Ordinal Notations,
+    thus $X$ can deduce that $P$'s outputs are Intuitive Ordinal Notations,
+    and so $X$ knows (or could deduce) that $P$ is an Intuitive Ordinal Notation.
+    So $X$'s Intuitive Ordinal Intelligence is $>|P|$. By construction, $|P|$ is
+    the least ordinal bigger than $|Q|$ for all $Q$ printed by $L$, in other words,
+    $|P|$ is the Intuitive Ordinal Intelligence of $Y$.
     \qed
 \end{proof}
 
@@ -302,112 +297,99 @@ is occasionally---perhaps at long intervals of time---indispensable.''
 (Charles Darwin)
 \end{quote}
 
-In his Origin of Species \cite{originofspecies}, Charles Darwin devotes many
-pages to the above-quoted principal, which would later become known as the
+In his Origin of Species \cite{originofspecies}, Darwin devotes many
+pages to the above-quoted principal, later called the
 Knight-Darwin Law \cite{darwin1898knight}. In \cite{alexander2013} and
-\cite{alexander2015alternative}, based on a close reading of Darwin's text, we argue
-that the Knight-Darwin Law is accurately translated into modern mathematical
-language as follows.
+\cite{alexander2015alternative}, we translate
+the Knight-Darwin Law into mathematical language.
 
 \begin{myprinciple}
 (The Knight-Darwin Law)
-It is impossible for there to be an infinite sequence
-$x_1,x_2,\ldots$ of living organisms such that each $x_i$
-is the lone biological parent of $x_{i+1}$. In other words,
-if there are ever organisms $x_1,x_2,\ldots$ such that each
-$x_i$ is a biological parent of $x_{i+1}$, then there must
-be some $i>1$ such that $x_i$ has multiple distinct biological
-parents.
+There cannot be an infinite sequence
+$x_1,x_2,\ldots$ of organisms such that each $x_i$
+is the lone biological parent of $x_{i+1}$.
+If each $x_i$ is a parent of $x_{i+1}$, then some $x_{i+1}$
+must have multiple parents.
 \end{myprinciple}
 
-One of the most important properties of the ordinal numbers is the
-fact that they are \emph{well-founded}: by which we mean, there is
+One of the most important properties of the ordinal numbers is
+\emph{well-foundedness}: there is
 no infinite sequence $o_1,o_2,\ldots$ of ordinals such that each
 $o_i>o_{i+1}$. In Theorem \ref{maintheorem} we showed that if truthful
-AGI $X$ creates truthful AGI $Y$, and if $X$ knows the truthfulness
-and the sourcecode of $Y$, then $X$ has a higher Literal Ordinal Intelligence
+AGI $X$ creates truthful AGI $Y$, in such a way as to know the truthfulness
+and sourcecode of $Y$, then $X$ has a higher Intuitive Ordinal Intelligence
 than $Y$. Combining this with the well-foundedness of the ordinals yields
-a theorem which is extremely similar to the Knight-Darwin Law.
+a theorem extremely similar to the Knight-Darwin Law.
 
 \begin{mytheorem}
 \label{maintheorem2}
 (The Knight-Darwin Law for AGIs)
-It is impossible for there to be an infinite sequence
-$x_1,x_2,\ldots$ of truthful AGIs such that each $x_i$ is the lone creator of $x_{i+1}$.
-In other words, if there are
-ever truthful AGIs $x_1,x_2,\ldots$ such that each $x_i$ is a creator of $x_{i+1}$,
-then there must be some $i>1$ such that multiple distinct creators collaborated to
-create $x_i$.
+There cannot be an infinite sequence
+$x_1,x_2,\ldots$ of truthful AGIs such that each $x_i$
+creates $x_{i+1}$ in such a way as to know $x_{i+1}$'s truthfulness and sourcecode.
+If each $x_i$ creates $x_{i+1}$ (intending $x_{i+1}$ to be truthful), then
+some $x_{i+1}$ must be co-created by multiple creators (assuming that creation by
+a lone creator implies the lone creator would know $x_{i+1}$'s sourcecode).
 \end{mytheorem}
 
 \begin{proof}
-By contradiction. Assume $x_1,x_2,\ldots$ is an infinite sequence of truthful AGIs such
-that each $x_i$ is the lone creator of $x_{i+1}$. For each $i$, let $\alpha_i$
-be the Literal Ordinal Intelligence of $x_i$. By Theorem \ref{maintheorem},
-$\alpha_1>\alpha_2>\cdots$. This contradicts the well-foundedness of the ordinal
-numbers.
+By Theorem \ref{maintheorem}, the Intuitive Ordinal Intelligence of $x_1,x_2,\ldots$
+would be an infinite strictly-descending sequence of ordinal numbers, which would
+violate the well-foundedness of the ordinals.
 \qed
 \end{proof}
 
-In the remainder of the section, we will speculate about three implications
+In the remainder of this section, we will non-rigorously speculate about three implications
 Theorem \ref{maintheorem2} might have for AGIs and for AGI research.
-We stress that the following speculations are not mathematically rigorous.
+
 
 \subsection{Motivation for Multi-agent Approaches to AGI}
 
-In the Introduction, we argued that, among other things, an AGI ought to be
-capable of programming AGIs. If this is true, Theorem \ref{maintheorem2} suggests
+In the Introduction, we argued that an AGI ought to be
+capable of programming AGIs. If so, Theorem \ref{maintheorem2} suggests
 that a fundamental aspect of AGI should be the ability to collaborate with other
 AGIs in the creation of new AGIs.
 
 One interesting idea along these lines is that there should be no
-such thing as a \emph{solipsistic} AGI, in other words, perhaps it is
-fundamentally impossible for an AGI to believe that the entire universe
-is imagined by itself. For, if an AGI had such a solipsistic belief, it
+such thing as a \emph{solipsistic} AGI, or at least, solipsistic AGIs would be
+limited in their ability to reproduce.
+For, if an AGI were solipsistic, it
 seems like it would be difficult for this AGI to collaborate with other AGIs
-to create child AGIs. And the Knight-Darwin Law for AGIs (Theorem \ref{maintheorem2})
-seems to suggest that collaboration is an important ingredient in AGI creation of AGI.
+to create child AGIs.
 
-Along more practical lines, Theorem \ref{maintheorem2} suggests it might be worth
+Along more practical lines, Theorem \ref{maintheorem2} suggests it may be worth
 prioritizing research into multi-agent systems, for example
 \cite{hibbard2011societies}, \cite{lazaridou2018emergence},
 \cite{bansal2017emergent}, and similar work.
 
-prioritizing specific approaches to AI that involve multiple agents. For example,
-(cite Brendon's papers).
+\subsection{Motivation for AGI Variety}
 
-\subsection{Motivation for AGI variety}
-
-The Knight-Darwin Law for biological organisms closely parallels the Knight-Darwin
-Law for AGI. Perhaps it might be fruitful to speculate about ways that the former
-can tell us things about the latter. The Knight-Darwin Law was important to Charles
-Darwin because it was a foundation for a broader thesis that the strength of a
-species depends on the inter-breeding of members of that species of a wide variety.
-By analogy, we might speculate that if our goal is to create very strong AGIs, then
+The Knight-Darwin Law was important to
+Darwin because it was a foundation for a broader thesis that the survival of a
+species depends on the inter-breeding of a variety of members of that species.
+By analogy, we might speculate that if our goal is to create robust AGIs, then
 we ought to focus on creating a wide variety of different kinds of AGIs, so that
 those AGIs can collaborate together\footnote{Anticipated
 by \cite{dai2011artificial}.} to co-create even stronger AGIs.
 
 On the other hand, if we want to reduce the danger of AGI getting out of control,
 perhaps the lesson to take away is to limit AGI variety. At the most extreme end
-of the spectrum, if mankind were to limit itself to only creating one single
-type of AGI, then Theorem \ref{maintheorem2} would constrain the extent to which
-AGIs could reproduce.
+of the spectrum, if humankind were to limit itself to only creating one single
+AGI, then Theorem \ref{maintheorem2} would constrain the extent to which
+that AGI could reproduce.
 
 
-\subsection{AGI genetics}
+\subsection{AGI Genetics}
 
-If it is true, as Theorem \ref{maintheorem2} seems to suggest, that AGI collaboration
+If, as Theorem \ref{maintheorem2} seems to suggest, AGI collaboration
 is a fundamental requirement for an AGI ``population'' to propagate, then it might
-be possible to view AGI through a genetic lens\footnote{Anticipated
+someday be possible to view AGI through a genetic lens\footnote{Anticipated
 by \cite{buchanan1988artificial}.}. If AGIs $X$ and $X'$ co-create child AGI $Y$ by
 means of $X$ contributing proprietary sourcecode for one submodule, concealed from $X'$,
 while $X'$ contributes proprietary sourcecode for another submodule, concealed from $X$,
-perhaps there might be some notion of AGI ``genes''. For example, if $X$ runs on operating
-system $O$, and $X'$ runs on operating system $O'$, then perhaps their joint offspring
-$Y$ should be considered likely to at least exhibit traces of both $O$ and $O'$.
-We could even imagine (although this might be a bit of a stretch) dominant and recessive
-genes in AGI.
+perhaps there might be some notion of AGI ``genes''. For example, if $X$ runs operating
+system $O$, and $X'$ runs operating system $O'$, perhaps their joint offspring
+will somehow exhibit traces of both $O$ and $O'$.
 
 
 \section{Objections}
