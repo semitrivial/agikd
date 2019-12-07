@@ -168,21 +168,20 @@ We will fill in the blank X with the phrase ``Intuitive Ordinal Notation''.
 \begin{myexample}
 \label{simpleexamples}
 (Some simple examples)
-    \begin{itemize}
+    \begin{enumerate}
     \item
     Let $P_0$ be ``End'', a program which immediately stops without printing any outputs.
-    Vacuously, every output $x$ that gets printed when $P_0$ is executed is in $\mathcal P$
-    (because there are no such outputs). So by condition 2 of
-    Definition \ref{literalnotationdef}, $P_0$ is a Literal Ordinal Notation.
+    Vacuously, every output printed when $P_0$ is executed is in $\mathcal P$
+    (there are no such outputs). So $P_0$ is an Intuitive Ordinal Notation.
     \item
-    Let $P_1$ be ``Print(``End'')'', a program which prints the output ``End'' and then
-    stops. We already saw $\mbox{``End''}\in\mathcal P$, so by condition 2 of
-    Definition \ref{literalnotationdef}, $P_1$ is a Literal Ordinal Notation.
+    Let $P_1$ be ``Print(``End'')'', a program which prints ``End'' and then
+    stops. By (1), every output printed by $P_1$ is an Intuitive Ordinal Notation,
+    therefore, so is $P_1$.
     \item
     Let $P_2$ be ``Print(``Print(``End'')'')'', which prints ``Print(``End'')'' and then
-    stops. We already saw $\mbox{``Print(``End'')''}\in\mathcal P$, so by condition 2
-    of Definition \ref{literalnotationdef}, $P_2$ is a Literal Ordinal Notation.
-    \end{itemize}
+    stops. By (2), every output printed by $P_2$ is an Intuitive Ordinal Notation,
+    therefore, so is $P_2$.
+    \end{enumerate}
 \end{myexample}
 
 \begin{myexample}
