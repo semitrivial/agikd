@@ -395,76 +395,84 @@ will somehow exhibit traces of both $O$ and $O'$.
 \section{Objections}
 \label{objectionsection}
 
-In this section, we address some anticipated objections that the reader might have.
+In this section, we address some anticipated objections.
 
 \subsection{What does Definition \ref{maindefinition} have to do with intelligence?}
 
-Whatever intelligence is, it certainly has core components like pattern-matching,
+Whatever intelligence is, it has core components like pattern-matching,
 creativity, and the ability to abstract and to generalize.
 I claim that these core parts of intelligence are indispensable if one wants to
-be competitive at naming large ordinals. If $\alpha$ is an ordinal whose
-notation was obtained using certain tricks, then \emph{any} AGI who can use those
-tricks should certainly be able to iterate those same tricks. Thus, to advance from
-$\alpha$ to a larger ordinal notation which not just \emph{any} $\alpha$-knowing
-AGI could obtain, must require the invention of some new technique or tactic, and
-this invention of a new technique manifestly requires some amount of creativity,
-pattern-matching, etc. This becomes particularly clear if the reader attempts to
+competitively name large ordinals. If $\alpha$ is an ordinal whose
+notation was obtained using certain tricks, then \emph{any} AGI who used those
+tricks to notate $\alpha$ should also be able to iterate those same tricks.
+Thus, to advance from
+$\alpha$ to a larger ordinal which not just \emph{any} $\alpha$-knowing
+AGI could obtain, must require the creative invention of some new technique or tactic, and
+this invention of a new technique requires some amount of creativity,
+pattern-matching, etc. This becomes clear if the reader attempts to
 go beyond Example \ref{omegaexample} and notate qualitatively larger ordinals;
-see the more extensive examples which we give in \cite{alexander2019measuring}.
+see the more extensive examples in \cite{alexander2019measuring}.
 
-Now, to reason by way of analogy, suppose we had a ladder which different AGIs
-could climb on, and suppose advancing up the ladder requires exercising different
-components of intelligence. Since we have so little other idea of how to measure
-intelligence, one way to measure, or at least to estimate, intelligence, would be
+We will say more.
+As an analogy, imagine a ladder which different AGIs
+can climb, and suppose advancing up the ladder requires exercising different
+components of intelligence. Since we have so little other idea how to measure
+intelligence, one way to measure (or at least estimate) it would be
 to measure how high an AGI can climb on said ladder.
 
 Not all ladders are equally good. A ladder would be particularly poor if it had
-a top rung, which many AGIs could reach: for then, the ladder would fail to
+a top rung which many AGIs could reach: for then, the ladder would fail to
 distinguish between different AGIs who could reach that top rung, even if one
-AGI could reach it with ease and another AGI could only reach it with difficulty.
+AGI reaches it with ease and another AGI reaches it with difficulty.
 Even if the ladder was infinite and had no top rung, it would still be a poor
-ladder if there were many different AGIs who were capable of scaling the whole
+ladder if there were many different AGIs capable of scaling the whole
 ladder (i.e., of ascending however high they like, on demand)\footnote{Hibbard's
-intelligence measure based on hierarchies of environments, as described in
-\cite{hibbard2011measuring}, is an example of an infinite ladder where many AGIs are
-capable of scaling the whole ladder. Those full-ladder-scalers are all the AGIs which
+intelligence measure
+\cite{hibbard2011measuring} is an example of an infinite ladder
+which is nevertheless short enough that many AGIs can
+scale the whole ladder. Those whole-ladder-scalers are the AGIs which
 do not ``have finite intelligence'' in Hibbard's words
 (defined implicitly, see Hibbard's Proposition 3). It would be straightforward to
-modify Hibbard's intelligence measure to make use of a fast-growing hierarchy
+use of a \emph{fast-growing hierarchy}
 \cite{hardy1904theorem} \cite{wainer1987provably}
-in order to grow Hibbard's ladder into the transfinite and reduce (or eliminate?)
+in extend Hibbard's ladder into the transfinite and reduce (or eliminate?)
 the set of AGIs capable of scaling the whole ladder. This transformation would make
 Hibbard's measurement ordinal-number-valued rather than natural-number-valued
-(perhaps Hibbard himself intuited this, since he used the word ``ordinal'' in his abstract
-in its non-technical sense as a synonym for ``natural number'').}.
+(perhaps Hibbard himself intuited this, since his abstract uses the
+word ``ordinal''
+in its everyday sense, i.e.\ as a synonym for ``natural number'').}.
 A good ladder
 should have the property that for every particular AGI, there is some rung which
 that AGI cannot reach.
 
-Definition \ref{maindefinition} provides a good ladder. Every AGI will fail to
-reach some rung, because no AGI can enumerate all the ordinal notations: it can
-be shown (and would be considered a routine exercise to a computability theorist)
-that the set of ordinal notations is non-computable. The rungs which an AGI does
+Definition \ref{maindefinition} provides a good ladder.
+The rungs which an AGI does
 manage to reach, we have argued, require the usage of core components of intelligence
 to reach.
+And no particular AGI can scale
+the whole ladder,
+because no AGI can enumerate all the Intuitive Ordinal Notations: it can
+be shown
+that the set of Intuitive Ordinal Notations is not computably enumerable.
 
 \subsection{Shouldn't intelligence depend on environmental interaction?}
 
 We do not claim that Definition \ref{maindefinition} is the ``one true measure'' of
-intelligence. In fact, maybe there is no such thing: maybe intelligence is inherently
-multi-dimensional. Definition \ref{maindefinition} measures one specific type of
-intelligence, a type of intelligence based on mathematical knowledge\footnote{Wang has
+intelligence. Maybe there is no such thing: maybe intelligence is inherently
+multi-dimensional. Definition \ref{maindefinition} measures one type of
+intelligence, a type based on mathematical knowledge\footnote{Wang has
 correctly pointed out \cite{wang2007} that an AGI consists of much more than merely
-a set of mathematical facts.}. It could be the
-case that some AGI is very good at playing video games, but poor at notating ordinals,
+a set of mathematical facts.}. Some AGI might be good at video games
+but poor at inventing ordinals,
 or vice versa. But any truly broad AGI should at least be capable (if properly
-instructed) of doing any reasonable well-defined task, including the task of
+instructed) of attempting any reasonable well-defined task, including the task of
 notating ordinals.
 So while Definition \ref{maindefinition} is not the ``one true measure'', it is a
-measure of something having to do with an AGI's abilities. It is possible that we
-have chosen the word ``intelligence'' poorly and that a different word, such as
-``knowledge-level'', would be more appropriate: but that would not qualitatively change
-Theorem \ref{maintheorem}, neither would it
+measure of something having to do with an AGI's abilities. It is possible that
+a different word, such as
+``knowledge-level'', would be more appropriate than ``intelligence'': but
+that would not qualitatively change
+Theorems \ref{maintheorem} or \ref{maintheorem2}, nor
 invalidate the parallel between the biological Knight-Darwin Law and the
 AGI Knight-Darwin Law.
 
@@ -473,26 +481,27 @@ AGI Knight-Darwin Law.
 The reader might object that Theorem \ref{maintheorem} breaks down if $Y$ is prohibitively
 expensive for $X$ to simulate or emulate. But actually, Theorem \ref{maintheorem} and its
 proof have nothing to do with simulation or emulation. A person can reason about sourcecode
-without needing to run that source-code (indeed, there's a whole industry devoted to
-exactly this---so-called \emph{static analysis}). In the same way, if $X$ knows the sourcecode
-of $Y$, then $X$ can reason about that sourcecode without actually executing a single line
+without needing to run it. In the same way, if $X$ knows the sourcecode
+of $Y$, then $X$ can reason about that sourcecode without executing a single line
 of it.
 
 \subsection{Recursive enumerability of mathematical theorems}
 
-The reader might object that the set of all mathematical theorems is recursively enumerable,
-i.e., there exists a Turing machine that lists all mathematical theorems---in which case we
-could build an AGI to build all such theorems, and that AGI would have unbeatable intelligence
-according to Definition \ref{maindefinition}, and this seems absurd.
-But when logicians say that the set of mathematical theorems is recursively enumerable,
-what they mean is that the set of mathematical theorems implied by some fixed, recursively
-enumerable base set of axioms, is recursively enumerable. For example, the set of all
-theorems of Peano arithmetic is recursively enumerable, or the set of all theorems of
-ZFC, etc. But G\"odel's first incompleteness theorem demonstrates that for any recursively
-enumerable set of axioms, there is always a true mathematical statement not proved by
-those axioms. Thus, there is no reason to believe there is some fixed recursively enumerable
-axiom-set such that all AGIs universally are limited to only knowing theorems provable
-from that axiom-set.
+``Isn't the set of all mathematical theorems computably enumerable?
+Coundn't an AGI just enumerate them all by brute force, and wouldn't that AGI have
+unbeatable intelligence according to Definition \ref{maindefinition}?'' The answer is no.
+The set of mathematical theorems is only computably enumerable when a computably
+enumerable base set of axioms is agreed upon in the background, in which case,
+the theorems provable \emph{from those axioms} are computably enumerable.
+For example, the
+theorems of Peano arithmetic are computably enumerable, as are the theorems of
+ZFC, etc. G\"odel's incompleteness theorem shows that for any computably
+enumerable set of axioms capable of basic arithmetic, there is always a
+true mathematical statement not provable by
+those axioms. In fact, G\"odel's theorem constructively tells us how to obtain such a
+statement.
+Thus, it is absurd to imagine there is some fixed computably enumerable
+set of theorems which all AGIs universally are limited to.
 
 \section{Conclusion}
 \label{conclusionsection}
