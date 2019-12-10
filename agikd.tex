@@ -43,8 +43,8 @@ we argue that a similar Law holds for AGIs.
 
 \section{Introduction}
 
-One thing that distinguishes AGIs from weaker AIs is that a truly
-strong AGI ought to be capable of programming AGIs\footnote{Within this paper,
+One thing that distinguishes AGIs from weaker AIs is that an
+AGI ought to be capable of programming AGIs\footnote{Within this paper,
 our approach to AGI is what Goertzel \cite{goertzel2014artificial} describes
 as the Universalist Approach:
 we consider ``...an idealized case of AGI, similar to
@@ -54,16 +54,16 @@ case, we can use the understanding we've gained to address more realistic
 cases.''}. After all, the first AGIs will,
 apparently, need to be programmed by humans. If AGIs are at least as smart as
 humans, and if humans can
-build AGIs, then AGIs ought to be able to build AGIs.
+build AGIs, then so should AGIs.
 
 AGIs programming AGIs is difficult to reason about. To get our hands on something solid,
 we have attempted to find structures that abstractly capture the core essence of
 AGIs programming AGIs. This led us to discover
-what we call the \emph{Intuitive Ordinal Notation System} (introduced in Section
+what we call the \emph{Intuitive Ordinal Notation System} (presented in Section
 \ref{notationsystemsection}), an ordinal notation system that gets directly at
 the heart of AGIs creating AGIs.
 
-We call an AGI \emph{truthful} if the things it knows are all true,
+We call an AGI \emph{truthful} if the things it knows (or could eventually deduce) are true,
 i.e., if it does not know any falsehoods.
 In \cite{alexander2019measuring}, we used the Intuitive Ordinal Notation System to argue
 that if a truthful AGI $X$ creates (without external help) a truthful AGI $Y$, in such a way
@@ -84,7 +84,7 @@ many elements.
 
 At first glance, the above results might
 seem to suggest skepticism regarding the singularity---or regarding
-what Hutter \cite{hutter2012} calls \emph{knowledge explosion}, the idea of
+what Hutter \cite{hutter2012} calls \emph{intelligence explosion}, the idea of
 AGIs creating better AGIs, which create even better AGIs, and so on.
 But there is a loophole. Suppose $X$ and $X'$ are AGIs
 who collaborate to create $Y$. Suppose $X$ contributes sourcecode for
@@ -94,7 +94,7 @@ $X$ nor $X'$ knows $Y$'s full sourcecode, and the above-mentioned argument
 breaks down.
 
 
-The Knight-Darwin law \cite{darwin1898knight}, named after Charles Darwin
+The Knight-Darwin Law \cite{darwin1898knight}, named after Charles Darwin
 and Andrew Knight, is the
 principal (rephrased in modern language) that there cannot be an infinite
 sequence $X_1,X_2,\ldots$ of biological organisms such that each $X_i$ asexually
@@ -129,7 +129,7 @@ In Section \ref{conclusionsection} we summarize and make concluding remarks.
 We do not know what, exactly, an AGI is, but we want to study AGIs anyway.
 Based on our conviction that an AGI should be capable of programming AGIs,
 we would like to come up with a more concrete structure, easier to reason
-about, which we can use as a proxy to better understand AGIs.
+about, which we can use to better understand AGIs.
 
 What sort of structure would capture the essence of an AGI's capability
 of programming AGI's? As an initial attempt, how about: ``computer
@@ -153,7 +153,6 @@ writing \emph{AGIs}.
 
 We need to short-circuit the above process. We need to come up with a notion
 X which is equivalent to ``computer program that prints members of X''.
-We will fill in the blank X with the phrase ``Intuitive Ordinal Notation''.
 
 \begin{mydefinition}
 \label{literalnotationdef}
@@ -177,11 +176,11 @@ We will fill in the blank X with the phrase ``Intuitive Ordinal Notation''.
     Vacuously, every output printed when $P_0$ is executed is in $\mathcal P$
     (there are no such outputs). So $P_0$ is an Intuitive Ordinal Notation.
     \item
-    Let $P_1$ be ``Print(``End'')'', a program which prints ``End'' and then
+    Let $P_1$ be ``Print(`End')'', a program which prints ``End'' and then
     stops. By (1), every output printed by $P_1$ is an Intuitive Ordinal Notation,
     therefore, so is $P_1$.
     \item
-    Let $P_2$ be ``Print(``Print(``End'')'')'', which prints ``Print(``End'')'' and then
+    Let $P_2$ be ``Print(`Print(`End')')'', which prints ``Print(`End')'' and then
     stops. By (2), every output printed by $P_2$ is an Intuitive Ordinal Notation,
     therefore, so is $P_2$.
     \end{enumerate}
@@ -195,8 +194,8 @@ We will fill in the blank X with the phrase ``Intuitive Ordinal Notation''.
         \mbox{\normalfont Let X = `End';
         While(True) \{ Print(X); X = ``Print(`'' + X + ``')''; \}}
     \]
-    When executed, $P_\omega$ prints ``End'', ``Print(``End'')'',
-    ``Print(``Print(``End'')'')'', and so on forever. As
+    When executed, $P_\omega$ prints ``End'', ``Print(`End')'',
+    ``Print(`Print(`End')')'', and so on forever. As
     in Example \ref{simpleexamples}, all of these are Intuitive Ordinal Notations.
     Therefore, $P_\omega$ is an Intuitive Ordinal Notation.
 \end{myexample}
@@ -253,7 +252,7 @@ generalize.
 
 \begin{mydefinition}
 \label{maindefinition}
-    The \emph{Intuitive Ordinal Intelligence} of an AGI $X$ is the smallest computable
+    The \emph{Intuitive Ordinal Intelligence} of a truthful AGI $X$ is the smallest computable
     ordinal $\alpha$ such that $\alpha>|p|$ for every Intuitive Ordinal Notation
     $p$ such that $X$ knows (or could eventually deduce) that $p$ is an
     Intuitive Ordinal Notation.
@@ -315,8 +314,8 @@ If each $x_i$ is a parent of $x_{i+1}$, then some $x_{i+1}$
 must have multiple parents.
 \end{myprinciple}
 
-One of the most important properties of the ordinal numbers is
-\emph{well-foundedness}: there is
+A key fact about the ordinal numbers is they are
+\emph{well-founded}: there is
 no infinite sequence $o_1,o_2,\ldots$ of ordinals such that each
 $o_i>o_{i+1}$. In Theorem \ref{maintheorem} we showed that if truthful
 AGI $X$ creates truthful AGI $Y$, in such a way as to know the truthfulness
@@ -362,8 +361,8 @@ to create child AGIs.
 
 Along more practical lines, Theorem \ref{maintheorem2} suggests it may be worth
 prioritizing research into multi-agent systems, for example
-\cite{hibbard2011societies}, \cite{lazaridou2018emergence},
-\cite{bansal2017emergent}, and similar work.
+\cite{bansal2017emergent}, \cite{hibbard2011societies}, \cite{lazaridou2018emergence},
+and similar work.
 
 \subsection{Motivation for AGI Variety}
 
@@ -406,8 +405,8 @@ Whatever intelligence is, it has core components like pattern-matching,
 creativity, and the ability to abstract and to generalize.
 I claim that these core parts of intelligence are indispensable if one wants to
 competitively name large ordinals. If $\alpha$ is an ordinal whose
-notation was obtained using certain tricks, then \emph{any} AGI who used those
-tricks to notate $\alpha$ should also be able to iterate those same tricks.
+notation was obtained using certain techniques, then \emph{any} AGI who used those
+techniques to notate $\alpha$ should also be able to iterate those same techniques.
 Thus, to advance from
 $\alpha$ to a larger ordinal which not just \emph{any} $\alpha$-knowing
 AGI could obtain, must require the creative invention of some new technique or tactic, and
@@ -417,7 +416,7 @@ go beyond Example \ref{omegaexample} and notate qualitatively larger ordinals;
 see the more extensive examples in \cite{alexander2019measuring}.
 
 We will say more.
-As an analogy, imagine a ladder which different AGIs
+For analogy's sake, imagine a ladder which different AGIs
 can climb, and suppose advancing up the ladder requires exercising different
 components of intelligence. Since we have so little other idea how to measure
 intelligence, one way to measure (or at least estimate) it would be
@@ -441,9 +440,9 @@ use a \emph{fast-growing hierarchy}
 to extend Hibbard's ladder into the transfinite and reduce (or eliminate?)
 the set of AGIs capable of scaling the whole ladder. This transformation would make
 Hibbard's measurement ordinal-number-valued rather than natural-number-valued
-(perhaps Hibbard himself intuited this, since his abstract uses the
+(perhaps Hibbard himself intuited this, since in his abstract uses the
 word ``ordinal''
-in its everyday sense, i.e.\ as a synonym for ``natural number'').}.
+in its everyday sense as a synonym for ``natural number'').}.
 A good ladder
 should have the property that for every particular AGI, there is some rung which
 that AGI cannot reach.
@@ -482,9 +481,9 @@ AGI Knight-Darwin Law.
 \subsection{Prohibitively expensive simulation}
 
 The reader might object that Theorem \ref{maintheorem} breaks down if $Y$ is prohibitively
-expensive for $X$ to simulate or emulate. But actually, Theorem \ref{maintheorem} and its
+expensive for $X$ to simulate or emulate. But Theorem \ref{maintheorem} and its
 proof have nothing to do with simulation or emulation. A person can reason about sourcecode
-without needing to run it. In the same way, if $X$ knows the sourcecode
+without running it. In the same way, if $X$ knows the sourcecode
 of $Y$, then $X$ can reason about that sourcecode without executing a single line
 of it.
 
@@ -502,8 +501,8 @@ ZFC, etc. By G\"odel's incompleteness theorem, for any computably
 enumerable true set of axioms capable of basic arithmetic, there is always a
 true mathematical statement not provable by
 those axioms. In fact, G\"odel's theorem constructively tells us how to obtain such a
-statement.
-Thus, it is absurd to imagine there is some fixed computably enumerable
+statement, and an AGI could easily follow G\"odel's recipe.
+Thus, it is unlikely that there is some fixed computably enumerable
 set of theorems which all AGIs universally are limited to.
 
 \section{Conclusion}
@@ -527,8 +526,8 @@ of the ordinals, this allowed us to establish a structural property for AGI popu
 a property which closely resembles a property of biological populations\footnote{For
 some other interesting work exploring AGI connections to animals and their
 populations,
-see \cite{strannegaard2018learning}, \cite{yoshida2017homeostatic},
-\cite{beyret2019animal}.}, the Knight-Darwin
+see \cite{beyret2019animal}, \cite{strannegaard2018learning},
+and \cite{yoshida2017homeostatic}.}, the Knight-Darwin
 Law. We speculated about implications of this remarkable parallel between biology and
 AGI (our speculations here are not intended to be exhaustive, and we expect there
 are many more implications besides). Our hope is that by better understanding
