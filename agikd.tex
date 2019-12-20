@@ -205,15 +205,6 @@ X which is equivalent to ``computer program that prints members of X''.
     Therefore, $P_\omega$ is an Intuitive Ordinal Notation.
 \end{myexample}
 
-Because of the recursive way the Intuitive Ordinal Notations are defined, there is a
-natural way to assign computable ordinal numbers to them.
-How do we assign a computable ordinal to an Intuitive Ordinal Notation $x$?
-We can assume (by induction) that we've
-already assigned computable ordinals to all the outputs printed when $x$
-is executed (this makes sense because all such outputs are Intuitive Ordinal Notations,
-by definition). So the answer is clear: assign $x$ the first computable ordinal bigger
-than all the computable ordinals assigned to the outputs of $x$.
-
 \begin{mydefinition}
     For any Intuitive Ordinal Notation $x$, we define a computable ordinal $|x|$
     inductively as follows: $|x|$ is the smallest computable ordinal $\alpha$
