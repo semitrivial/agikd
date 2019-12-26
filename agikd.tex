@@ -530,46 +530,45 @@ of it.
 Coundn't an AGI just enumerate them all by brute force, and wouldn't that AGI have
 unbeatable intelligence according to Definition \ref{maindefinition}?'' The answer is no.
 The set of mathematical theorems is only computably enumerable when a computably
-enumerable base set of axioms is agreed upon in the background, in which case,
+enumerable base set of axioms is fixed in the background, in which case,
 the theorems provable \emph{from those axioms} are computably enumerable.
 For example, the
-theorems of Peano arithmetic are computably enumerable, as are the theorems of
-ZFC, etc. By G\"odel's incompleteness theorem, for any computably
-enumerable true set of axioms capable of basic arithmetic, there is always a
+theorems of Peano arithmetic are computably enumerable.
+By G\"odel's incompleteness theorem, for any computably
+enumerable true set of axioms capable of arithmetic, there is always a
 true mathematical statement not provable by
-those axioms. In fact, G\"odel's theorem constructively tells us how to obtain such a
+those axioms. In fact, G\"odel constructively tells us how to obtain such a
 statement, and an AGI could easily follow G\"odel's recipe.
-Thus, it is unlikely that there is some fixed computably enumerable
-set of theorems which all AGIs universally are limited to.
+%Thus, it is unlikely that there is some fixed computably enumerable
+%set of theorems which all AGIs universally are limited to.
 
 \section{Conclusion}
 \label{conclusionsection}
 
-We reviewed, from \cite{alexander2019measuring}, an intelligence measurement notion
-for a truthful AGI based on that AGI's mathematical knowledge.
-In short: the Intuitive Ordinal Intelligence of a truthful AGI is the supremum of the
+%We reviewed, from \cite{alexander2019measuring}, an intelligence measurement notion
+%for a truthful AGI based on that AGI's mathematical knowledge.
+%In short:
+The Intuitive Ordinal Intelligence of a truthful AGI is defined to be the supremum of the
 computable ordinals which have notations the AGI knows to be notations of
 computable ordinals. We discussed why we think this counter-intuitive intelligence
-measurement notion indeed measures (at least a type of) intelligence.
-
-The intelligence measure which we introduced measures intelligence not using real
-numbers, but rather using computable ordinal numbers. These have the so-called
-\emph{well-ordering property}: there is no infinite, strictly-descending sequence
-of computable ordinals. We proved that if a truthful AGI creates
+measurement notion measures (a type of) intelligence.
+We proved that if a truthful AGI creates
 a child truthful AGI, in such a way as to know the child's truthfulness and sourcecode,
-then the parent must necessarily be more intelligent than the child according
-to the intelligence notion introduced here. Together with the well-foundedness
-of the ordinals, this allowed us to establish a structural property for AGI populations,
-a property which closely resembles a property of biological populations\footnote{For
+then the parent must be more intelligent than the child according
+to our intelligence measure. This allowed us to establish a structural
+property for AGI populations,
+closely resembling a property of biological populations\footnote{For
 some other interesting work exploring AGI connections to animals and their
 populations,
 see \cite{beyret2019animal}, \cite{strannegaard2018learning},
 and \cite{yoshida2017homeostatic}.}, the Knight-Darwin
-Law. We speculated about implications of this remarkable parallel between biology and
-AGI (our speculations here are not intended to be exhaustive, and we expect there
-are many more implications besides). Our hope is that by better understanding
-the process by which AGIs must create new AGIs, we can make progress toward a more
-ambitious goal: the creation of AGIs by humans.
+Law. We speculated about implications of this parallel between biology and
+AGI.
+%(our speculations here are not intended to be exhaustive, and we expect there
+%are many more implications besides).
+We hope that by better understanding
+the process by which AGIs must create new AGIs, we can make progress toward the
+creation of AGIs by humans.
 
 \section*{Acknowledgments}
 
