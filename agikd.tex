@@ -262,7 +262,7 @@ Section \ref{objectionsection}.
 \begin{mydefinition}
 \label{maindefinition}
     The \emph{Intuitive Ordinal Intelligence} of a truthful AGI $X$ is the smallest
-    ordinal $\alpha$ such that $\alpha>|p|$ for every Intuitive Ordinal Notation
+    ordinal $|X|$ such that $|X|>|p|$ for every Intuitive Ordinal Notation
     $p$ such that $X$ knows (or could eventually deduce) that $p$ is an
     Intuitive Ordinal Notation.
 \end{mydefinition}
@@ -286,10 +286,18 @@ and AGI creation of AGI.
     think of. This would result in some list $L$ of Intuitive Ordinal Notations
     enumerated by $Y$. Since $Y$ is an AGI, $L$ must be computable, because $L$ can
     be enumerated by a robot (namely by $Y$). Thus, there is some computer program
-    $P$ whose outputs are exactly $L$. Since $X$ knows $Y$'s code,
-    and presumably $X$ is capable of elementary reasoning about code,
-    it follows that $X$ can infer $P$---that is,
-    $X$ knows (or could eventually deduce) the statement: ``$P$ outputs
+    $P$ whose outputs are exactly $L$.
+    Since $X$ knows $Y$'s code,
+    and presumably $X$ is capable of reasoning about code,
+    it follows that $X$ can infer a program $P$ that\footnote{For example,
+    $X$ could write a general program $Sim(c)$ which takes as input a code
+    $c$ of an AGI, simulates that AGI waking up in an empty room and being commanded
+    to spend eternity enumerating Intuitive Ordinal Notations. This program $Sim(c)$
+    would then output whatever outputs the AGI with code $c$ outputs under those
+    circumstances. Having written $Sim(c)$, $X$ could then obtain $P$ by plugging $Y$'s
+    code into $Sim$. Note that nowhere in this process do we require $X$ to actually
+    execute $Sim$ (which might be computationally infeasible).} lists $L$.
+    Having constructed $P$ this way, $X$ would certainly know the statement: ``$P$ outputs
     $L$, the list of things $Y$ would print if $Y$ were commanded to spend eternity
     trying to enumerate large Intuitive Ordinal Notations''.
     Since $X$ knows $Y$ is truthful,
