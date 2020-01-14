@@ -75,11 +75,11 @@ In \cite{alexander2019measuring}, we used the Intuitive Ordinal Notation System 
 that if a truthful AGI $X$ creates (without external help) a truthful AGI $Y$, in such a way
 that $X$ knows the truthfulness of $Y$, then $X$ must be more intelligent than $Y$
 in a certain formal sense. The argument is based on the key assumption that if $X$
-creates $Y$, without external help, then $X$ necessarily knows $Y$'s sourcecode.
+creates $Y$, without external help, then $X$ necessarily knows $Y$'s source code.
 
 Iterating the above argument, suppose $X_1,X_2,\ldots$
 are truthful AGIs such that each $X_i$ creates, and knows the truthfulness and
-the sourcecode of, $X_{i+1}$. By the previous paragraph, $X_1$ would be more
+the code of, $X_{i+1}$. By the previous paragraph, $X_1$ would be more
 intelligent than $X_2$, which would be more
 intelligent than $X_3$, and so on.
 In Section \ref{informalargumentsection} we will argue that this implies
@@ -99,10 +99,10 @@ seem to suggest skepticism regarding the singularity---or regarding
 what Hutter \cite{hutter2012} calls \emph{intelligence explosion}, the idea of
 AGIs creating better AGIs, which create even better AGIs, and so on.
 But there is a loophole. Suppose $X$ and $X'$ are AGIs
-who collaborate to create $Y$. Suppose $X$ contributes sourcecode for
+who collaborate to create $Y$. Suppose $X$ contributes code for
 part of $Y$, but keeps it secret from $X'$, and suppose $X'$ contributes
-sourcecode for another part of $Y$, but keeps it secret from $X$. Then neither
-$X$ nor $X'$ knows $Y$'s full sourcecode, and the above-mentioned argument
+code for another part of $Y$, but keeps it secret from $X$. Then neither
+$X$ nor $X'$ knows $Y$'s full source code, and the above-mentioned argument
 breaks down.
 
 
@@ -121,7 +121,7 @@ System.
 
 In Section \ref{informalargumentsection} we argue that if a truthful AGI $X$ creates
 a truthful AGI $Y$, such that $X$
-knows the truthfulness and the sourcecode of $Y$, then $Y$ is less intelligent
+knows the truthfulness and the code of $Y$, then $Y$ is less intelligent
 than $X$. This argument appeared in a fully rigorous form in \cite{alexander2019measuring},
 but in this paper we attempt to make it more approachable by informally giving
 the key idea behind it.
@@ -276,7 +276,7 @@ and AGI creation of AGI.
 \begin{mytheorem}
 \label{maintheorem}
     Suppose $X$ is a truthful AGI, and $X$ creates a truthful AGI $Y$,
-    in such a way that $X$ knows $Y$'s sourcecode and truthfulness. Then
+    in such a way that $X$ knows $Y$'s code and truthfulness. Then
     $X$ has higher Intuitive Ordinal Intelligence than $Y$.
 \end{mytheorem}
 
@@ -286,8 +286,8 @@ and AGI creation of AGI.
     think of. This would result in some list $L$ of Intuitive Ordinal Notations
     enumerated by $Y$. Since $Y$ is an AGI, $L$ must be computable, because $L$ can
     be enumerated by a robot (namely by $Y$). Thus, there is some computer program
-    $P$ whose outputs are exactly $L$. Since $X$ knows $Y$'s sourcecode,
-    and presumably $X$ is capable of elementary reasoning about sourcecodes,
+    $P$ whose outputs are exactly $L$. Since $X$ knows $Y$'s code,
+    and presumably $X$ is capable of elementary reasoning about code,
     it follows that $X$ can infer $P$---that is,
     $X$ knows (or could eventually deduce) the statement: ``$P$ outputs
     $L$, the list of things $Y$ would print if $Y$ were commanded to spend eternity
@@ -306,7 +306,7 @@ Theorem \ref{maintheorem} is mainly intended for the situation where parent $X$ 
 independent child $Y$, but can also be applied in case $X$ self-modifies,
 viewing the original $X$ as being replaced by the new self-modified
 $Y$ (assuming $X$ has prior
-knowledge of the source-code and truthfulness of the modified result).
+knowledge of the code and truthfulness of the modified result).
 
 \section{The Knight-Darwin Law}
 \label{knightdarwinagisection}
@@ -347,7 +347,7 @@ A key fact about the ordinal numbers is they are
 no infinite sequence $o_1,o_2,\ldots$ of ordinals such that each
 $o_i>o_{i+1}$. In Theorem \ref{maintheorem} we showed that if truthful
 AGI $X$ creates truthful AGI $Y$, in such a way as to know the truthfulness
-and sourcecode of $Y$, then $X$ has a higher Intuitive Ordinal Intelligence
+and code of $Y$, then $X$ has a higher Intuitive Ordinal Intelligence
 than $Y$. Combining this with the well-foundedness of the ordinals yields
 a theorem extremely similar to the Knight-Darwin Law.
 
@@ -356,10 +356,10 @@ a theorem extremely similar to the Knight-Darwin Law.
 (The Knight-Darwin Law for AGIs)
 There cannot be an infinite sequence
 $x_1,x_2,\ldots$ of truthful AGIs such that each $x_i$
-creates $x_{i+1}$ in such a way as to know $x_{i+1}$'s truthfulness and sourcecode.
+creates $x_{i+1}$ in such a way as to know $x_{i+1}$'s truthfulness and code.
 If each $x_i$ creates $x_{i+1}$ (intending $x_{i+1}$ to be truthful), then
 some $x_{i+1}$ must be co-created by multiple creators (assuming that creation by
-a lone creator implies the lone creator would know $x_{i+1}$'s sourcecode).
+a lone creator implies the lone creator would know $x_{i+1}$'s code).
 \end{mytheorem}
 
 \begin{proof}
@@ -439,8 +439,8 @@ If, as Theorem \ref{maintheorem2} seems to suggest, AGI collaboration
 is a fundamental requirement for an AGI ``population'' to propagate, then it might
 someday be possible to view AGI through a genetic lens\footnote{Anticipated
 by \cite{buchanan1988artificial}.}. If AGIs $X$ and $X'$ co-create child AGI $Y$ by
-means of $X$ contributing proprietary sourcecode for one submodule, concealed from $X'$,
-while $X'$ contributes proprietary sourcecode for another submodule, concealed from $X$,
+means of $X$ contributing proprietary code for one submodule, concealed from $X'$,
+while $X'$ contributes proprietary code for another submodule, concealed from $X$,
 perhaps there might be some notion of AGI ``genes''. For example, if $X$ runs operating
 system $O$, and $X'$ runs operating system $O'$, perhaps their joint offspring
 will somehow exhibit traces of both $O$ and $O'$.
@@ -544,21 +544,21 @@ hard-coded.
     (Bob Dylan)
 \end{quote}
 
-If an AGI knows its own sourcecode, then there's nothing stopping that
+If an AGI knows its own code, then there's nothing stopping that
 AGI from printing a copy of itself.
 However, if it does so, then it necessarily cannot know the truthfulness of that
 copy, lest it would know the truthfulness of itself.
 G\"odel's incompleteness theorems imply that a suitably idealized AGI cannot know
-its own sourcecode
+its own code
 and its own truthfulness (see \cite{alexander2014machine}).
 
 \subsection{Prohibitively expensive simulation}
 
 The reader might object that Theorem \ref{maintheorem} breaks down if $Y$ is prohibitively
 expensive for $X$ to simulate or emulate. But Theorem \ref{maintheorem} and its
-proof have nothing to do with simulation or emulation. A person can reason about sourcecode
-without running it. In the same way, if $X$ knows the sourcecode
-of $Y$, then $X$ can reason about that sourcecode without executing a single line
+proof have nothing to do with simulation or emulation. A person can reason about code
+without running it. In the same way, if $X$ knows the code
+of $Y$, then $X$ can reason about that code without executing a single line
 of it.
 
 \subsection{Computable enumerability of mathematical theorems}
@@ -590,7 +590,7 @@ computable ordinals which have notations the AGI knows to be notations of
 computable ordinals. We discussed why we think this counter-intuitive intelligence
 measurement notion measures (a type of) intelligence.
 We proved that if a truthful AGI creates
-a child truthful AGI, in such a way as to know the child's truthfulness and sourcecode,
+a child truthful AGI, in such a way as to know the child's truthfulness and code,
 then the parent must be more intelligent than the child according
 to our intelligence measure. This allowed us to establish a structural
 property for AGI populations,
