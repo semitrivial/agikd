@@ -341,8 +341,19 @@ If each $x_i$ is a parent of $x_{i+1}$, then some $x_{i+1}$
 must have multiple parents.
 \end{myprinciple}
 
-A key fact about the ordinals is they are
-\emph{well-founded}: there is
+A key fact about the ordinals is they
+are \emph{well-founded}\footnote{This is essentially true by definition,
+hinging on the question of what ordinals formally are, which is beyond the scope of
+this paper. But if the reader is willing to accept that mathematical induction works
+on the ordinals like it does on the naturals, the following argument will convince
+the reader there is no infinite descending sequence (IDS) of ordinals.
+Certainly there is no infinite descending sequence (IDS) starting at $0$.
+Let $\alpha>0$ be an ordinal and inductively assume there is no IDS
+starting at $\beta$ for any $\beta<\alpha$. If there were an IDS
+$\alpha>\alpha'>\alpha''>\cdots$ starting at $\alpha$, then
+$\alpha'>\alpha''>\cdots$ would be an IDS starting at $\alpha'$,
+contradicting the inductive assumption.}:
+there is
 no infinite sequence $o_1,o_2,\ldots$ of ordinals such that each
 $o_i>o_{i+1}$. In Theorem \ref{maintheorem} we showed that if truthful
 AGI $X$ creates truthful AGI $Y$, in such a way as to know the truthfulness
