@@ -583,9 +583,9 @@ hard-coded.
 %     (Bob Dylan)
 % \end{quote}
 
-If an AGI knows its own code, then there's nothing stopping that
-AGI from printing a copy of itself.
-However, if it does so, then it necessarily cannot know the truthfulness of that
+If an AGI knows its own code,
+then it can certainly print a copy of itself.
+But if so, then it necessarily cannot know the truthfulness of that
 copy, lest it would know the truthfulness of itself.
 Versions of G\"odel's incompleteness theorems adapted \cite{reinhardt1985absolute} to
 mechanical knowing agents imply that a suitably idealized AGI cannot know
@@ -595,12 +595,12 @@ and its own truthfulness.
 \subsection{Prohibitively expensive simulation}
 
 The reader might object that Theorem \ref{maintheorem} breaks down if $Y$ is prohibitively
-expensive for $X$ to simulate or emulate. But Theorem \ref{maintheorem} and its
-proof have nothing to do with simulation or emulation. In functional languages like
-Haskell, functions are first-order objects and can be manipulated, filtered,
-formally composed with other functions, and so on, without ever actually needing to
+expensive for $X$ to simulate. But Theorem \ref{maintheorem} and its
+proof have nothing to do with simulation. In functional languages like
+Haskell, functions can be manipulated, filtered,
+formally composed with other functions, and so on, without needing
 be executed.
-In the same way, if $X$ knows the code
+Likewise, if $X$ knows the code
 of $Y$, then $X$ can manipulate and reason about that code without executing a single line
 of it.
 
@@ -611,14 +611,10 @@ and wouldn't that AGI have
 unbeatable intelligence according to Definition \ref{maindefinition}?''
 The set of mathematical theorems is only computably enumerable when a computably
 enumerable base axiom-set is fixed in the background.
-By G\"odel's incompleteness theorem, for any computably
-enumerable true set of axioms capable of arithmetic, there is always a
-true mathematical statement not provable by
-those axioms.
-% In fact, G\"odel constructively tells us how to obtain such a
-% statement, and an AGI could easily follow G\"odel's recipe.
-%Thus, it is unlikely that there is some fixed computably enumerable
-%set of theorems which all AGIs universally are limited to.
+% By G\"odel's incompleteness theorem, for any computably
+% enumerable true set of axioms capable of arithmetic, there is always a
+% true mathematical statement not provable by
+% those axioms.
 
 \section{Conclusion}
 \label{conclusionsection}
