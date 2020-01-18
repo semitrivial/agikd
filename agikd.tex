@@ -27,13 +27,13 @@ collaboration}
 Can an AGI create a more intelligent AGI?
 Under idealized assumptions, our answer is:
 ``Not without outside help''.
-This is a paper about the mathematical structure of AGI populations
+This is a paper on the mathematical structure of AGI populations
 when parent AGIs create child AGIs. We argue that such populations
 satisfy a certain biological law.
 Motivated by observations of sexual reproduction in seemingly-asexual
 species,
 the Knight-Darwin Law states that it is impossible for one organism
-to asexually produce another organism, which asexually produces another,
+to asexually produce another, which asexually produces another,
 and so on forever:
 that any sequence of organisms (each one a child of the previous) must contain
 occasional multi-parent organisms, or must terminate.
@@ -50,8 +50,8 @@ we argue that a similar Law holds for AGIs.
 
 One thing that distinguishes agents with Artificial General Intelligence (AGIs)
 from weaker AIs is that an
-AGI ought to be capable of programming AGIs\footnote{Within this paper,
-our approach to AGI is what Goertzel \cite{goertzel2014artificial} describes
+AGI ought to be capable of programming AGIs\footnote{Our approach to AGI is what
+Goertzel \cite{goertzel2014artificial} describes
 as the Universalist Approach:
 we consider ``...an idealized case of AGI, similar to
 assumptions like the frictionless plane in physics'', with the hope that by
@@ -72,15 +72,14 @@ the heart of AGIs creating AGIs.
 We call an AGI \emph{truthful} if the things it knows (or could eventually
 deduce\footnote{Identifying what is known with what could eventually
 be deduced is of course only valid in the idealized context of this paper.
-In Section 6 of \cite{alexander2019measuring} we suggest a hypothetical way in which
-these idealized results could be applied to certain less-idealized machines.}) are true,
+In Section 6 of \cite{alexander2019measuring} we suggest a hypothetical way
+these idealized results could be applied to certain less-idealized AGIs.}) are true,
 i.e., if it does not know any falsehoods.
 In \cite{alexander2019measuring}, we used the Intuitive Ordinal Notation System to argue
 that if a truthful AGI $X$ creates (without external help) a truthful AGI $Y$, in such a way
-that $X$ knows the truthfulness\footnote{One reason the creator might want the created
-AGI truthful is because if the created AGI eventually deduces a contradiction, such as
-$1=0$, then, at least in classical mathematics where a contradiction proves everything,
-the created AGI could immediately deduce things like ``I should kill my creator''.}
+that $X$ knows the truthfulness\footnote{If the created AGI could eventually deduce
+a contradiction, then, at least in classical mathematics,
+it could also deduce things like ``I should kill my creator''.}
 of $Y$, then $X$ must be more intelligent than $Y$
 in a certain formal sense. The argument is based on the key assumption that if $X$
 creates $Y$, without external help, then $X$ necessarily knows $Y$'s source code.
@@ -258,13 +257,13 @@ an ordinal notation system known as Kleene's $\mathcal O$.
 \section{Intuitive Ordinal Intelligence}
 \label{informalargumentsection}
 
-Whatever an AGI is, presumably an AGI knows certain mathematical facts
-(or could eventually deduce them).
+Whatever an AGI is, presumably an AGI knows (or could eventually deduce) certain
+mathematical facts.
 The following is a universal notion of an AGI's intelligence based
 solely on said facts. In \cite{alexander2019measuring}
 we argue that this notion captures key components of intelligence such as
-pattern recognition, creativity, and the ability to abstract and to
-generalize. We will offer additional justification in
+pattern recognition, creativity, and the ability to abstract or
+generalize. We will offer further justification in
 Section \ref{objectionsection}.
 
 \begin{mydefinition}
@@ -298,12 +297,12 @@ and AGI creation of AGI.
     Since $X$ knows $Y$'s code,
     and presumably $X$ is capable of reasoning about code,
     it follows that $X$ can infer a program $P$ that\footnote{For example,
-    $X$ could write a general program $Sim(c)$ which takes as input a code
-    $c$ of an AGI and simulates that AGI waking up in an empty room and being commanded
+    $X$ could write a general program $Sim(c)$ that simulates an input AGI $c$
+    waking up in an empty room and being commanded
     to spend eternity enumerating Intuitive Ordinal Notations. This program $Sim(c)$
-    would then output whatever outputs the AGI with code $c$ outputs under those
+    would then output whatever outputs AGI $c$ outputs under those
     circumstances. Having written $Sim(c)$, $X$ could then obtain $P$ by
-    pasting $Y$'s code into $Sim$ (as a string operation---not actually running $Sim$
+    pasting $Y$'s code into $Sim$ (a string operation---not actually running $Sim$
     on $Y$'s code).
     Nowhere in this process do we require $X$ to actually
     execute $Sim$ (which might be computationally infeasible).} lists $L$.
