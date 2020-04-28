@@ -71,17 +71,18 @@ what we call the \emph{Intuitive Ordinal Notation System} (presented in Section
 \ref{notationsystemsection}), an ordinal notation system that gets directly at
 the heart of AGIs creating AGIs.
 
-We call an AGI \emph{truthful} if the things it knows (or could eventually
-deduce\footnote{Identifying what is known with what could eventually
-be deduced is of course only valid in the idealized context of this paper.
-In Section 6 of \cite{alexander2019measuring} we suggest a hypothetical way
-these idealized results could be applied to certain less-idealized AGIs.}) are true,
+We call an AGI \emph{truthful} if the things it knows\footnote{Throughout, we assume
+AGI knowledge is closed under logical
+deduction. This assumption is ubiquitous in modal logic, often expressed in
+the form
+$K(\phi\rightarrow\psi)\rightarrow (K(\phi)\rightarrow K(\psi))$. Of course,
+it is only in the idealized context of this paper that one should assume an AGI's
+knowledge satisfies such axioms.}
+are true,
 i.e., if it does not know any falsehoods.
 In \cite{alexander2019measuring}, we used the Intuitive Ordinal Notation System to argue
 that if a truthful AGI $X$ creates (without external help) a truthful AGI $Y$, in such a way
-that $X$ knows the truthfulness\footnote{If the created AGI could eventually deduce
-a contradiction, then, at least in classical mathematics,
-it could also deduce things like ``I should kill my creator''.}
+that $X$ knows the truthfulness
 of $Y$, then $X$ must be more intelligent than $Y$
 in a certain formal sense. The argument is based on the key assumption that if $X$
 creates $Y$, without external help, then $X$ necessarily knows $Y$'s source code.
@@ -260,7 +261,7 @@ an ordinal notation system known as Kleene's $\mathcal O$.
 \section{Intuitive Ordinal Intelligence}
 \label{informalargumentsection}
 
-Whatever an AGI is, presumably an AGI knows (or could eventually deduce) certain
+Whatever an AGI is, presumably an AGI knows certain
 mathematical facts.
 The following is a universal notion of an AGI's intelligence based
 solely on said facts. In \cite{alexander2019measuring}
@@ -276,7 +277,7 @@ results.
 \label{maindefinition}
     The \emph{Intuitive Ordinal Intelligence} of a truthful AGI $X$ is the smallest
     ordinal $|X|$ such that $|X|>|p|$ for every Intuitive Ordinal Notation
-    $p$ such that $X$ knows (or could eventually deduce) that $p$ is an
+    $p$ such that $X$ knows that $p$ is an
     Intuitive Ordinal Notation.
 \end{mydefinition}
 
@@ -316,9 +317,9 @@ and AGI creation of AGI.
     $L$, the list of things $Y$ would output if $Y$ were commanded to spend eternity
     trying to enumerate large Intuitive Ordinal Notations''.
     Since $X$ knows $Y$ is truthful,
-    $X$ can deduce that $L$ contains nothing except Intuitive Ordinal Notations,
-    thus $X$ can deduce that $P$'s outputs are Intuitive Ordinal Notations,
-    and so $X$ knows (or could deduce) that $P$ is an Intuitive Ordinal Notation.
+    $X$ knows that $L$ contains nothing except Intuitive Ordinal Notations,
+    thus $X$ knows that $P$'s outputs are Intuitive Ordinal Notations,
+    and so $X$ knows that $P$ is an Intuitive Ordinal Notation.
     So $|X|>|P|$. But $|P|$ is
     the least ordinal $>|Q|$ for all $Q$ output by $L$, in other words,
     $|P|=|Y|$.
