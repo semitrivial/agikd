@@ -90,7 +90,7 @@ Iterating the above argument, suppose $X_1,X_2,\ldots$
 are truthful AGIs such that each $X_i$ creates, and knows the truthfulness and
 the code of, $X_{i+1}$. By the previous paragraph, $X_1$ would be more
 intelligent than $X_2$, which would be more
-intelligent than $X_3$, and so on.
+intelligent than $X_3$, and so on (in our certain formal sense).
 In Section \ref{informalargumentsection} we will argue that this implies
 it is impossible for such
 a list $X_1,X_2,\ldots$ to go on forever: it would have to stop after finitely
@@ -102,7 +102,7 @@ AGIs which presumably comprehend
 linguistically strong second-order predicates.}.
 
 At first glance, the above results might
-seem to suggest skepticism regarding the singularity---or regarding
+seem to suggest skepticism regarding the singularity---regarding
 what Hutter \cite{hutter2012} calls \emph{intelligence explosion}, the idea of
 AGIs creating better AGIs, which create even better AGIs, and so on.
 But there is a loophole. Suppose $X$ and $X'$ are AGIs
@@ -138,7 +138,7 @@ in a fully rigorous form in \cite{alexander2019measuring},
 but in this paper we attempt to make it more approachable.} that if truthful AGI $X$ creates
 truthful AGI $Y$, such that $X$
 knows the code and truthfulness of $Y$, then $Y$ is less intelligent
-than $X$.
+than $X$ in a certain formal sense.
 
 In Section \ref{knightdarwinagisection} we adapt the Knight-Darwin Law from biology to AGI
 and speculate about what it might mean for AGI.
@@ -266,8 +266,11 @@ The following is a universal notion of an AGI's intelligence based
 solely on said facts. In \cite{alexander2019measuring}
 we argue that this notion captures key components of intelligence such as
 pattern recognition, creativity, and the ability to abstract or
-generalize. We will offer further justification in
-Section \ref{objectionsection}.
+generalize. We will give further justification in
+Section \ref{objectionsection}. Even if the reader refuses to accept this as
+a genuine intelligence measure, that is merely a name we have chosen for it:
+we could give it any other name without compromising this paper's structural
+results.
 
 \begin{mydefinition}
 \label{maindefinition}
@@ -390,7 +393,7 @@ Theorem \ref{maintheorem} that $Y$ might operate faster
 than $X$, thereby performing better in realtime environments (as in \cite{gavane}).
 Theorems \ref{maintheorem} and \ref{maintheorem2} are profound because
 they suggest that descendants might initially appear more practical
-(faster, stronger, etc.),
+(faster, better at problem-solving, etc.),
 yet, without outside help, their knowledge must degenerate.
 This parallels the \emph{hydra game} of
 Kirby and Paris \cite{kirby1982accessible}, where a hydra
@@ -406,9 +409,9 @@ to know the child's truth and code), but could still
 co-create children with other AGIs.}
 $|Y|<|X|$ or $|Y|<|X'|$. This does not necessarily mean that
 $|Y|$ can be arbitrarily large, though. If $X$ and $X'$ were themselves
-created single-handedly by a lone parent $X_0$, then similar
+created single-handedly by a lone parent $X_0$, similar
 reasoning to Theorem \ref{maintheorem} would force $|Y|<|X_0|$ (assuming $X_0$
-could infer the code and truthfulness of $Y$ from the codes of $X$ and $X'$)\footnote{This
+could infer the code and truthfulness of $Y$ from those of $X$ and $X'$)\footnote{This
 suggests possible generalizations of the Knight-Darwin Law such as ``There cannot be
 an infinite sequence $x_1,x_2,\ldots$ of biological organisms such that each $x_i$
 is the lone grandparent of $x_{i+1}$,'' and AGI versions of same.}.
@@ -425,7 +428,7 @@ that a fundamental aspect of AGI should be the ability to collaborate with other
 AGIs in the creation of new AGIs\footnote{It is particularly interesting that our
 intelligence measure naturally motivates multi-agent considerations in spite of
 the fact that, a priori, Definition \ref{maindefinition} measures intelligence
-completely independently of the surrounding collective of other agents
+independently of the surrounding collective of other agents
 (contrast \cite{hernandez2011more}) or even the outside world.}.
 
 One interesting idea along these lines is that there should be no
@@ -496,14 +499,14 @@ multi-dimensional. Definition \ref{maindefinition} measures a type of
 intelligence based on mathematical knowledge\footnote{Wang has
 correctly pointed out \cite{wang2007} that an AGI consists of much more than merely
 a knowledge-set of mathematical facts. Still, we feel mathematical knowledge is at least
-one important aspect of an AGI's intelligence.}. An AGI could be good at video games
+one important aspect of an AGI's intelligence.}. An AGI could be good at problem-solving
 but poor at ordinals. But the broad AGIs we are talking about in this paper
 should be capable (if properly
 instructed) of attempting any reasonable well-defined task, including that of
 notating ordinals. So Definition \ref{maindefinition} does
 measure one aspect of an AGI's abilities. Perhaps
 a different word, such as
-``knowledge-level'', would fit better: but
+``mathematical-knowledge-level'', would fit better: but
 that would not qualitatively change
 the Knight-Darwin Law implications.
 
@@ -529,8 +532,7 @@ see the more extensive examples in \cite{github}.
 
 For analogy's sake, imagine a ladder which different AGIs
 can climb, and suppose advancing up the ladder requires exercising
-intelligence. Having so little other idea how to measure
-intelligence, one way to measure (or at least estimate) it would be
+intelligence. One way to measure (or at least estimate) intelligence would be
 to measure how high an AGI can climb said ladder.
 
 Not all ladders are equally good. A ladder would be particularly poor if it had
@@ -621,16 +623,16 @@ enumerable base axiom-set is fixed in the background.
 %In short:
 The Intuitive Ordinal Intelligence of a truthful AGI is defined to be the supremum of the
 ordinals which have Intuitive Ordinal Notations the AGI knows to be Intuitive Ordinal
-Notations. We discussed why we think this notion measures (a type of) intelligence.
+Notations. We explained why this notion measures (a type of) intelligence.
 We proved that if a truthful AGI single-handedly creates
 a child truthful AGI, in such a way as to know the child's truthfulness and code,
 then the parent must have greater Intuitive Ordinal Intelligent than the child. This
 allowed us to establish a structural property for AGI populations,
-resembling a property of biological populations, the Knight-Darwin
-Law. We speculated about implications of this biology-AGI parallel.
-We hope that by better understanding
-how AGIs create new AGIs, we can make progress toward
-understanding methods of AGI-creation by humans.
+resembling the Knight-Darwin
+Law from biology. We speculated about implications of this biology-AGI parallel.
+We hope by better understanding
+how AGIs create new AGIs, we can better
+understand methods of AGI-creation by humans.
 
 \section*{Acknowledgments}
 
