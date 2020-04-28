@@ -228,7 +228,7 @@ of Franz's approach of ``head[ing] for general algorithms at low complexity leve
 and fill[ing] the task cup from the bottom up'' \cite{franz2015toward}.
 For a much larger collection of examples, see \cite{github}.
 A different type of example will be sketched in the proof of Theorem
-\ref{mytheorem} below.
+\ref{maintheorem} below.
 
 \begin{mydefinition}
     For any Intuitive Ordinal Notation $x$, we define an ordinal $|x|$
@@ -560,14 +560,16 @@ The rungs which an AGI
 manages to reach, we have argued, require core components of intelligence
 to reach.
 And no particular AGI can scale
-the whole ladder,
-because no AGI can enumerate all the Intuitive Ordinal Notations: it can
-be shown
-that they are not computably enumerable\footnote{Thus,
-this ladder avoids a common problem that arises when
+the whole ladder\footnote{Thus, this ladder avoids a common problem that arises when
 trying to measure machine intelligence using IQ tests, namely, that for any IQ test,
 an algorithm can be designed to dominate that
-test, despite being otherwise unintelligent \cite{besold2015can}.}.
+test, despite being otherwise unintelligent \cite{besold2015can}.},
+because no AGI can enumerate all the Intuitive Ordinal Notations: it can
+be shown
+that they are not computably enumerable\footnote{Namely, because if the
+set of Intuitive Ordinal Notations were computably enumerable, the program $p$ which
+enumerates them would itself be an Intuitive Ordinal Notation, which would
+force $|p|>|p|$.}.
 
 
 \subsection{Can't an AGI just print a copy of itself?}
